@@ -8,12 +8,14 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  
+  "homepage": "https://delphi1004.github.io/portfolio",
   "eslintConfig": {
     "extends": "react-app"
   },
