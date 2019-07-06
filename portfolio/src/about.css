@@ -1,0 +1,23 @@
+.about{
+    background-color:white;
+    color:black;
+    position: relative;
+    text-align: justify;
+    font-size: 2vw;
+    font-weight: 600;
+    line-height: 1.1vw;
+    letter-spacing: 0.5px;
+    padding: 10vw 15% 10% 10%;
+    /* animation: fadeIn ease 1s; */
+  }
+
+  .about p{
+    text-align: justify;
+    font-size: 1.2vw;
+    line-height: 2.3vw;
+    color:rgb(50,50,50);
+    font-weight: 300;
+    letter-spacing: 0px;
+    padding-top : 2.0vw;
+    padding-right: 10vw;
+  }

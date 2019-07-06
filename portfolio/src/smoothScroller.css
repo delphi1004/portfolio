@@ -1,0 +1,15 @@
+.TEST{
+    position: relative;
+    animation: smoothScroll ease 1s;
+  }
+
+  @keyframes smoothScroll{
+
+    0% {
+      top: 0px;
+    }
+    100% {
+      top: 400px;
+    }
+
+  }

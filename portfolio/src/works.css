@@ -1,0 +1,55 @@
+.works{
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    position: relative;
+    font-size: 4vw;
+    text-align: left;
+    font-weight:600;
+    line-height: 3vw;
+    margin:0 0 0 0;
+    letter-spacing: 2.1vw;
+    padding: 8% 15% 10% 10%;
+    animation: fadeIn ease 2s;
+  }
+
+.works_sub{
+    color:black;
+    text-align: justify;
+    text-transform: uppercase;
+    font-size: 2.2vw;
+    font-weight: 300;
+    line-height: 4.5vw;
+    letter-spacing: 0.2vw;
+  }
+
+  .work_short_menu{
+    position: fixed;
+    top:6%;
+    margin:0% 0% 0% 0%;
+    letter-spacing: 0.2vw;
+    font-size: 1.5vw;
+    text-align: left;
+    z-index:1;
+    font-weight: 500;
+    padding: 5% 0% 0% 0%;
+    animation: fadeIn ease 5s;
+  }
+
+  #link_text_works{
+    position: fixed;
+    top:10%;
+    left:5%;
+    z-index:1;
+    font-size: 1.5vw;
+    text-align: left;
+    z-index:1;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 70px;
+    color:rgb(228, 151, 17);
+    text-decoration: none;
+  }
+
+  #link_text:hover{
+    color:rgb(228, 151, 17);
+  }

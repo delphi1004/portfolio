@@ -1,0 +1,27 @@
+.cv{
+    background-color:white;
+    color:black;
+    position: relative;
+    text-align: justify;
+    font-size: 2vw;
+    font-weight: 600;
+    line-height: 1.1vw;
+    letter-spacing: 0.5px;
+    padding: 10vw 15% 10% 10%;
+    height : 10vw;
+    /* animation: fadeIn ease 1s; */
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  p{
+    text-align: justify;
+    font-size: 1.4vw;
+    line-height: 2.2vw;
+    color:rgb(50,50,50);
+    font-weight: 200;
+    letter-spacing: 0px;
+    padding-top : 1.5vw;
+  }

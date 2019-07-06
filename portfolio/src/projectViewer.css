@@ -1,0 +1,134 @@
+.prj_body{
+    background-color:white;
+    color:black;
+    position: relative;
+    text-align: left;
+    font-weight: 600;
+    line-height: 28px;
+    margin:0 0 0 0;
+    padding: 10% 5% 0% 10%;
+    letter-spacing: 1px;
+  }
+
+  .prj_grid_container {
+    display: grid;
+    grid-column-gap: 5px;
+    padding-bottom : 2vw;
+  }
+  
+  .prj_group_name{
+    font-size: 3vw;
+    padding :0;
+  }
+
+  .prj_group_description{
+    font-size: 1.3vw;
+    text-align: left;
+    font-weight: 300;
+    line-height: 1vw;
+    letter-spacing: 0.5px;
+    padding-top :1vw;
+  }
+
+  .prj_title{
+    font-size:1.5vw;
+    font-weight: 500;
+    letter-spacing: 3px;
+    padding-top : 7vw;
+    margin : 0%;
+    text-transform: uppercase;
+  }
+
+  .prj_tools{
+    font-size:0.9vw;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-style : oblique;
+    padding-right :30vw;
+    line-height: 2vw;
+  }
+
+  .prj_description{
+    color :black;
+    font-size:1.1vw;
+    text-align: justify;
+    font-weight: 300;
+    line-height: 2vw;
+    letter-spacing: 0.1px;
+    width:97%;
+    padding-top : 0%;
+    margin-top : 2vw;
+  }
+
+  .prj_img img{
+    position: relative;
+    vertical-align: top;
+    float: left;
+    margin: 0 0 0 0;
+    padding-top: 2.6vw;
+    padding-bottom: 3.5%;
+    width:100%;
+    margin : 0%;
+  }
+
+  .prj_img iframe{
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: relative;
+    top: 2.5vw;
+    width: 100%;
+    margin : 0%;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top : 50px;
+    padding-bottom : 100px;
+  }
+  
+  .column {
+    flex: 100%;
+    max-width: 49%;
+    padding: 0 5px 5px; 
+  }
+  
+  .column img {
+    margin : 0%;
+    vertical-align: top;
+    image-orientation: from-image;
+  }
+
+  .column iframe{
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: relative;
+    top: 2.5vw;
+    width: 100%;
+    margin : 0%;
+  }
+
+  .column .text{
+    color :black;
+    font-size:1.1vw;
+    text-align: justify;
+    font-weight: 300;
+    line-height: 2vw;
+    letter-spacing: 0.1px;
+    width:100%;
+    padding-top : 0%;
+    margin-top : 0%;
+  }
+  
+  .caption{
+    color :#717171;
+    font-size:0.8vw;
+    text-align: center;
+    font-weight: 300;
+    line-height: 25px;
+    font-style: oblique;
+    letter-spacing: 0.1px;
+    padding : 0%;
+  }
