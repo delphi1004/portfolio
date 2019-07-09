@@ -26,7 +26,7 @@ class About extends React.Component{
 
         console.log("componentDidMount About");
 
-        this.state.opacity = 0;
+        this.setState({opacity : 0});
 
         this.myRect = this.myRef.current.getBoundingClientRect();
 

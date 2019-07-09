@@ -81,7 +81,7 @@ class MainMenu extends React.Component{
     let posRatio = .0;
     const rect = this.myRef.current.getBoundingClientRect();
 
-    posRatio = (-300 - rect.y) / -300;
+    posRatio = (-200 - rect.y) / -200;
   
     this.setState({opacity : posRatio});
 
