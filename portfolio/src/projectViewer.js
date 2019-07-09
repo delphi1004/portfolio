@@ -78,7 +78,7 @@ class ProjectViewer extends React.Component{
   
          this.setState({mainOpacity : posRatio});
   
-         console.log("ratio in works " + posRatio);
+         //console.log("ratio in works " + posRatio);
   
         if (this.checkAutoGoback === true && posRatio < 0.3){
   
