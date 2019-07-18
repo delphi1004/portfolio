@@ -56,6 +56,8 @@ function move2(timeStamp){
 
     currentSinValue += sinValueIncrement;
     currentValue += valueIncrement * (Math.sin(currentSinValue) ** 2) * 2;
+
+    console.log("scroll to " + currentSinValue);
     
     if (currentSinValue < Math.PI) {
         window.scroll(0, currentValue);
