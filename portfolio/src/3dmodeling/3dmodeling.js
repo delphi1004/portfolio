@@ -24,59 +24,59 @@ function Modeling3D(){
               resources : [
   
                 {
-                  "image" : require("../resources/3dmodeling_01.png"),
+                  "image" : require("../resources/small/3dmodeling_01.png"),
                   "text" : null,
                 },
 
                 {
-                    "image" : require("../resources/3dmodeling_02.png"),
+                    "image" : require("../resources/small/3dmodeling_02.png"),
                     "text" : null,
                 },
 
                 {
-                    "image" : require("../resources/3dmodeling_03.png"),
+                    "image" : require("../resources/small/3dmodeling_03.png"),
                     "text" : null,
                 },
                 {
-                    "image" : require("../resources/3dmodeling_12.png"),
-                    "text" : null,
-                },
-  
-                {
-                    "image" : require("../resources/3dmodeling_05.png"),
+                    "image" : require("../resources/small/3dmodeling_12.png"),
                     "text" : null,
                 },
   
                 {
-                    "image" : require("../resources/3dmodeling_06.png"),
+                    "image" : require("../resources/small/3dmodeling_05.png"),
+                    "text" : null,
+                },
+  
+                {
+                    "image" : require("../resources/small/3dmodeling_06.png"),
                      "text" : null,
                 },
                 {
-                    "image" : require("../resources/3dmodeling_07.png"),
+                    "image" : require("../resources/small/3dmodeling_07.png"),
                     "text" : null,
                 },
   
                 {
-                    "image" : require("../resources/3dmodeling_08.png"),
+                    "image" : require("../resources/small/3dmodeling_08.png"),
                     "text" : null,
                 },
   
                 {
-                    "image" : require("../resources/3dmodeling_09.png"),
+                    "image" : require("../resources/small/3dmodeling_09.png"),
                      "text" : null,
                 },
                 {
-                    "image" : require("../resources/3dmodeling_10.png"),
+                    "image" : require("../resources/small/3dmodeling_10.png"),
                     "text" : null,
                 },
   
                 {
-                    "image" : require("../resources/3dmodeling_11.png"),
+                    "image" : require("../resources/small/3dmodeling_11.png"),
                     "text" : null,
                 },
   
                 {
-                    "image" : require("../resources/3dmodeling_04.png"),
+                    "image" : require("../resources/small/3dmodeling_04.png"),
                      "text" : null,
                 },
               ]

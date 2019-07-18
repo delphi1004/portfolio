@@ -28,32 +28,32 @@ function Exhibitions(){
               resources : [
   
                 {
-                  "image" : require("../resources/Korea_Exhibition_03.png"),
+                  "image" : require("../resources/small/Korea_Exhibition_03.png"),
                   "text" : null,
                 },
 
                 {
-                   "image" : require("../resources/Korea_Exhibition_02.png"),
+                   "image" : require("../resources/small/Korea_Exhibition_02.png"),
                    "text" : null,
                 },
 
                 {
-                   "image" : require("../resources/Korea_Exhibition_01.png"),
+                   "image" : require("../resources/small/Korea_Exhibition_01.png"),
                    "text" : null,
                 },
 
                 {
-                    "image" : require("../resources/Korea_Exhibition_04.JPG"),
+                    "image" : require("../resources/small/Korea_Exhibition_04.JPG"),
                     "text" : null,
                 },
   
                 {
-                     "image" : require("../resources/Korea_Exhibition_05.JPG"),
+                     "image" : require("../resources/small/Korea_Exhibition_05.JPG"),
                      "text" : null,
                 },
   
                 {
-                     "image" : require("../resources/Korea_Exhibition_10.JPG"),
+                     "image" : require("../resources/small/Korea_Exhibition_10.JPG"),
                      "text" : null,
                 },
 
@@ -89,42 +89,42 @@ function Exhibitions(){
                   resources : [
 
                     {
-                        "image" : require("../resources/SeeingSound_12.JPG"),
+                        "image" : require("../resources/small/SeeingSound_12.JPG"),
                         "text" : null,
                     },
       
                     {
-                      "image" : require("../resources/SeeingSound_01.JPG"),
+                      "image" : require("../resources/small/SeeingSound_01.JPG"),
                       "text" : null,
                     },
     
                     {
-                       "image" : require("../resources/SeeingSound_10.JPG"),
+                       "image" : require("../resources/small/SeeingSound_10.JPG"),
                        "text" : null,
                     },
     
                     {
-                       "image" : require("../resources/SeeingSound_03.JPG"),
+                       "image" : require("../resources/small/SeeingSound_03.JPG"),
                        "text" : null,
                     },
     
                     {
-                        "image" : require("../resources/SeeingSound_04.JPG"),
+                        "image" : require("../resources/small/SeeingSound_04.JPG"),
                         "text" : null,
                     },
 
                     {
-                        "image" : require("../resources/SeeingSound_09.JPG"),
+                        "image" : require("../resources/small/SeeingSound_09.JPG"),
                         "text" : null,
                     },
       
                     {
-                         "image" : require("../resources/SeeingSound_02.JPG"),
+                         "image" : require("../resources/small/SeeingSound_02.JPG"),
                          "text" : null,
                     },
 
                     {
-                        "image" : require("../resources/SeeingSound_11.png"),
+                        "image" : require("../resources/small/SeeingSound_11.png"),
                         "text" : null,
                     },
     

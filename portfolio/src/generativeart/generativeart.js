@@ -18,7 +18,7 @@ function GenerativeArt(){
           tools : "Supervisor : Prof. David Hall (IDAS Korea)  - Tool : Processing, Maya, Pekakura",
 
           main_image : {
-            "image" : require("../resources/soundvis_01.JPG"),
+            "image" : require("../resources/small/soundvis_01.JPG"),
             "caption" : "Sound visualization in 3D sculpture"
           },
 
@@ -27,12 +27,12 @@ function GenerativeArt(){
             resources : [
 
               {
-                "image" : require("../resources/soundvis_03.JPG"),
+                "image" : require("../resources/small/soundvis_03.JPG"),
                 "text" : "Sound visualization in 3D sculpture",
               },
 
               {
-                "image" : require("../resources/soundvis_02.JPG"),
+                "image" : require("../resources/small/soundvis_02.JPG"),
                 "text" : "Sound visualization made of Newspaper",
               }
             ]
@@ -55,19 +55,19 @@ function GenerativeArt(){
               resources : [  
   
                 {
-                  "image" : require("../resources/shape_01.png"),
+                  "image" : require("../resources/small/shape_01.png"),
                 },
 
                 {
-                  "image" : require("../resources/shape_03.png"),
+                  "image" : require("../resources/small/shape_03.png"),
                 },
   
                 {
-                  "image" : require("../resources/shape_02.png"),
+                  "image" : require("../resources/small/shape_02.png"),
                 },
 
                 {
-                  "image" : require("../resources/shape_04.png"),
+                  "image" : require("../resources/small/shape_04.png"),
                 },
               ]
             },

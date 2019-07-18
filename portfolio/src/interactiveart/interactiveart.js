@@ -28,37 +28,37 @@ function InteractiveArt(){
               resources : [
   
                 {
-                  "image" : require("../resources/aqua_01.png"),
+                  "image" : require("../resources/small/aqua_01.png"),
                   "text" : null,
                 },
   
                 {
-                    "image" : require("../resources/aqua_02.png"),
+                    "image" : require("../resources/small/aqua_02.png"),
                     "text" : null,
                 },
 
                 {
-                    "image" : require("../resources/aqua_03.JPG"),
+                    "image" : require("../resources/small/aqua_03.JPG"),
                     "text" : null,
                 },
 
                 {
-                    "image" : require("../resources/aqua_07.JPG"),
+                    "image" : require("../resources/small/aqua_07.JPG"),
                     "text" : null,
                 },
 
                 {
-                    "image" : require("../resources/aqua_05.JPG"),
+                    "image" : require("../resources/small/aqua_05.JPG"),
                     "text" : null,
                 },
 
                 {
-                    "image" : require("../resources/aqua_06.JPG"),
+                    "image" : require("../resources/small/aqua_06.JPG"),
                     "text" : null,
                 },
 
                 {
-                    "image" : require("../resources/aqua_04.JPG"),
+                    "image" : require("../resources/small/aqua_04.JPG"),
                     "text" : null,
                 },
 
@@ -80,19 +80,19 @@ function InteractiveArt(){
                 tools : "Tool : Arduino, Laser cutter , Rotary sensor",
       
                 main_image : {
-                  "image" : require("../resources/game_controller_01.JPG"),
+                  "image" : require("../resources/small/game_controller_01.JPG"),
                   "caption" : "Two people should play the game together efficiently",
                 },
     
                   resources : [
       
                     {
-                      "image" : require("../resources/game_controller_02.JPG"),
+                      "image" : require("../resources/small/game_controller_02.JPG"),
                       "text" : "Rotary encoder to detect the steps of the rotation",
                     },
       
                     {
-                        "image" : require("../resources/game_controller_03.JPG"),
+                        "image" : require("../resources/small/game_controller_03.JPG"),
                         "text" : "Laser cutting",
                     },
                   ]
