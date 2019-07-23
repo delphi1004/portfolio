@@ -20,12 +20,12 @@ class MainMenu extends React.Component{
       goBackOpacity : 0.0,
       goBackSize : "0vw",
       refreshMe : false,
-      refreshKey : 0
+      refreshKey : 0,
+      myHeight : 1000,
     };
 
     this.myRect = null;
     this.myRef = React.createRef();
-
     this.scrollDoneHandler = this.scrollDoneHandler.bind(this);
     this.onScroll = this.onScroll.bind(this);
     this.menuClicked = this.menuClicked.bind(this);
@@ -37,12 +37,14 @@ class MainMenu extends React.Component{
 
     this.checkAutoGoback  = false;
 
-    console.log(this.myRect);
-
     this.myRect = this.myRef.current.getBoundingClientRect();
 
     console.log(this.myRect);
     console.log("main_menu componentDidMount");
+
+    this.setState({myHeight : (this.myRect.height *2)});
+
+    console.log("New Height "+ this.state.myHeight);
 
     window.addEventListener('scroll', this.onScroll);
 
@@ -148,7 +150,7 @@ class MainMenu extends React.Component{
 
       <Router>
 
-        <div ref = {this.myRef}>
+        <div ref = {this.myRef} style = {{height : this.state.myHeight}}>
 
         <this.displayFullMenu menuOpacity = {this.state.opacity} goBackOpacity = {this.state.goBackOpacity}
         goBackSize = {this.state.goBackSize} 

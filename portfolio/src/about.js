@@ -24,7 +24,7 @@ class About extends React.Component{
 
     componentDidMount(){
 
-        console.log("componentDidMount About");
+        console.log("componentDidMount About "+window.height);
 
         this.setState({opacity : 0});
 
@@ -35,6 +35,8 @@ class About extends React.Component{
         window.addEventListener('scroll', this.onScroll);
 
        this.scrollToMyRef();
+
+       
     }
 
     componentWillUnmount(){
@@ -86,9 +88,6 @@ class About extends React.Component{
                  a varied background including tech, design, and art. I like to work with people who have a
                  different background, experiences. Also I'd like to teach people who don't have a chance to
                  though. I’d love for an opportunity to meet and talk further about how we may work together.</p>
-
-                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            
             </div>
         );
     }

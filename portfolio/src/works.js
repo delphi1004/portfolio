@@ -194,7 +194,6 @@ class Works extends React.Component{
 
                 <div>
                     <Route exact path="/works/projectviewer" render = {()=> <ProjectViewer myParent = {this} description = {this.targetDescription}/>}/>
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 </div>
           
             </div>

@@ -202,7 +202,7 @@ class ProjectViewer extends React.Component{
 
                     <div className = "prj_grid_container" style = {{gridTemplateColumns : project.containerColumn}}>
                         <p className = "prj_description"> {project.description}</p>
-                          {this.createMainImage(project.main_image)}
+                        {this.createMainImage(project.main_image)}
                     </div>
 
                     <div className = "row">
