@@ -96,18 +96,6 @@ class MainMenu extends React.Component{
      }
  }
 
-  displayShortMenu(props){
-
-    return(
-
-      <div className = "short_menu">
-
-        <NavLink  id = "link_text_home" to="/" onClick ={()=> props.handler(0)}>/home</NavLink><br/>
-  
-      </div>
-    );
-  }
-
   displayFullMenu(props) {
 
     return (
@@ -137,41 +125,42 @@ class MainMenu extends React.Component{
 
     if (this.state.refreshMe === true){
 
-      this.setState({refreshMe : false});
+      this.setState({refreshMe : false})
 
       return(
         <Router >
           <Redirect to="/" push />
         </Router>
       )
-    }
+      }else{
     
-    return (
+        return (
 
-      <Router>
+            <Router>
 
-        <div ref = {this.myRef} style = {{height : this.state.myHeight}}>
+              <div ref = {this.myRef} style = {{height : this.state.myHeight}}>
 
-        <this.displayFullMenu menuOpacity = {this.state.opacity} goBackOpacity = {this.state.goBackOpacity}
-        goBackSize = {this.state.goBackSize} 
-        handler = {this.menuClicked} />
+              <this.displayFullMenu menuOpacity = {this.state.opacity} goBackOpacity = {this.state.goBackOpacity}
+              goBackSize = {this.state.goBackSize} 
+              handler = {this.menuClicked} />
 
-          <div>
+                <div>
 
-            <Route path="/about" render = {()=> <About myParent = {this}/>}/>
-            <Route path="/works" render = {()=> <Works myParent = {this}/>}/>
-            <Route path="/exhibition" render = {()=> <Exhibition myParent = {this}/>}/>
-            <Route path="/cv" render = {()=> <CV myParent = {this}/>}/>
-            <Route path="/contact" render = {()=> <Contact myParent = {this}/>}/>
+                  <Route path="/about" render = {()=> <About myParent = {this}/>}/>
+                  <Route path="/works" render = {()=> <Works myParent = {this}/>}/>
+                  <Route path="/exhibition" render = {()=> <Exhibition myParent = {this}/>}/>
+                  <Route path="/cv" render = {()=> <CV myParent = {this}/>}/>
+                  <Route path="/contact" render = {()=> <Contact myParent = {this}/>}/>
 
-          </div>
+                </div>
 
-        </div>
+              </div>
 
-      </Router>
+            </Router>
 
-    );
-  }
+          );
+        }
+    }
 }
 
 export default MainMenu;

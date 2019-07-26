@@ -188,10 +188,8 @@ class ProjectViewer extends React.Component{
 
     createBody(project , index){
 
-        let resourceType;
         let result;
-
-        resourceType = Object.keys(project);
+        let projectSource = project.resources ? project.resources.map((value,index) =>{return this.createResources(value,index,project.maxResourceWidth)}) : null
 
         result = (
 
@@ -207,7 +205,7 @@ class ProjectViewer extends React.Component{
 
                     <div className = "row">
                         
-                        {project.resources ? project.resources.map((value,index) =>{return this.createResources(value,index,project.maxResourceWidth)}) : null}
+                        {projectSource}
                  
                     </div>
                 
@@ -219,13 +217,15 @@ class ProjectViewer extends React.Component{
 
     render(){
 
+        let projectBody = this.description.project.map((value,index) =>{return this.createBody(value,index)})
+
         return(
 
             <div className = "prj_body" ref={this.myRef} style = {{opacity : this.state.mainOpacity}} onScroll={this.onScroll}>
                 <h1 className = "prj_group_name" >{this.description.category.name}</h1>
                 <h2 className = "prj_group_description">{this.description.category.description}</h2>
                 
-                {this.description.project.map((value,index) =>{return this.createBody(value,index)})}
+                {projectBody}
 
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </div>
