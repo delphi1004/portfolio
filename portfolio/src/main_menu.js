@@ -69,7 +69,7 @@ class MainMenu extends React.Component{
 
     this.scrollToMyRef();
 
-    window.location = 'portfolio/'
+    window.location = '/'
   }
 
   menuClicked(id){
