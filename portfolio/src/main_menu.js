@@ -65,7 +65,9 @@ class MainMenu extends React.Component{
 
     console.log("refreshMe called");
 
-    this.setState({refreshMe : true});
+    this.setState({refreshMe : false});
+
+    window.location = '/'
   }
 
   menuClicked(id){
