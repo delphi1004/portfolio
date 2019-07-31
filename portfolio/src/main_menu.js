@@ -67,7 +67,7 @@ class MainMenu extends React.Component{
 
     this.setState({refreshMe : false});
 
-    window.location = '/portfolio/'
+    window.location = 'https://delphi1004.github.io/portfolio/'
   }
 
   menuClicked(id){
