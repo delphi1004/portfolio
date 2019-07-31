@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Route, Link , NavLink, Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect} from "react-router-dom";
 import "./main_menu.css"
 import StartScrolling from "./smoothScrolling"
 import About from "./about"
@@ -19,11 +19,11 @@ class MainMenu extends React.Component{
       opacity : 1.0,
       goBackOpacity : 0.0,
       goBackSize : "0vw",
-      refreshMe : false,
       refreshKey : 0,
       myHeight : 1000,
     };
 
+    this.refresh = false;
     this.myRect = null;
     this.myRef = React.createRef();
     this.scrollDoneHandler = this.scrollDoneHandler.bind(this);
@@ -65,9 +65,11 @@ class MainMenu extends React.Component{
 
     console.log("refreshMe called");
 
-    this.setState({refreshMe : false});
+    //this.refresh = true;
 
-    window.location = 'https://delphi1004.github.io/portfolio/'
+    this.scrollToMyRef();
+
+    window.location = '/'
   }
 
   menuClicked(id){
@@ -125,13 +127,13 @@ class MainMenu extends React.Component{
   
   render(){
 
-    if (this.state.refreshMe === true){
+    if (this.refresh === true){
 
-      this.setState({refreshMe : false})
+      this.refresh = false
 
       return(
         <Router >
-          <Redirect to="/" push />
+          <Redirect to = '/' />
         </Router>
       )
       }else{
