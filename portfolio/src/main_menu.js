@@ -65,11 +65,11 @@ class MainMenu extends React.Component{
 
     console.log("refreshMe called");
 
-    //this.refresh = true;
+    this.refresh = true;
 
     this.scrollToMyRef();
 
-    window.location = '/'
+   // window.location = '/'
   }
 
   menuClicked(id){
