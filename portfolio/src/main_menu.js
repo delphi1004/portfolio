@@ -58,7 +58,7 @@ class MainMenu extends React.Component{
 
   scrollDoneHandler(){
 
-    ;
+    
   }
 
   refreshMe(){
@@ -69,7 +69,7 @@ class MainMenu extends React.Component{
 
     this.scrollToMyRef();
 
-    window.location = '/'
+    window.location = 'portfolio/'
   }
 
   menuClicked(id){
