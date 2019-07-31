@@ -67,7 +67,7 @@ class MainMenu extends React.Component{
 
     this.setState({refreshMe : false});
 
-    window.location = '/'
+    window.location = '/portfolio/'
   }
 
   menuClicked(id){
