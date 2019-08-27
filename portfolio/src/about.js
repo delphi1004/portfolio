@@ -1,6 +1,7 @@
 import React from "react"
 import "./about.css"
 import StartScrolling from "./smoothScrolling"
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
 class About extends React.Component{
@@ -24,6 +25,12 @@ class About extends React.Component{
 
     componentDidMount(){
 
+        Events.scrollEvent.register('begin',this.startScrolling)
+
+        Events.scrollEvent.register('end', this.scrollDoneHandler)
+
+        scrollSpy.update();
+
         console.log("componentDidMount About "+window.height);
 
         this.setState({opacity : 0});
@@ -34,9 +41,7 @@ class About extends React.Component{
 
         window.addEventListener('scroll', this.onScroll);
 
-       this.scrollToMyRef();
-
-       
+        this.scrollToMyRef();
     }
 
     componentWillUnmount(){
@@ -51,7 +56,17 @@ class About extends React.Component{
 
     scrollToMyRef(){
 
-        StartScrolling(this.myRef , this.scrollDoneHandler);
+        let targetPos;
+
+        targetPos = this.myRef.current.getBoundingClientRect().top +window.scrollY;
+
+        console.log("targetPos "+targetPos);
+
+        scroll.scrollTo(targetPos, {
+            duration: 500,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+          })
     }
 
     onScroll(event){
@@ -72,7 +87,7 @@ class About extends React.Component{
 
         return(
 
-            <div style = {{opacity : this.state.opacity}} ref={this.myRef} onScroll={this.onScroll} className = "about">
+            <div style = {{opacity : this.state.opacity}} ref={this.myRef} className = "about">
 
                 <h1 >John Lee</h1>
                 <h5 style = {{fontSize:'1.3vw', fontWeight:300}}>Software Developer, Media Artist</h5>
@@ -91,9 +106,6 @@ class About extends React.Component{
             </div>
         );
     }
-
-
-
 }
 
 export default About;
