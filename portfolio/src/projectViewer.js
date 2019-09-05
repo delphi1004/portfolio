@@ -1,5 +1,6 @@
 import React from "react"
 import "./projectViewer.css"
+import {Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
 import StartScrolling from "./smoothScrolling"
 
 class ProjectViewer extends React.Component{
@@ -36,6 +37,10 @@ class ProjectViewer extends React.Component{
 
     componentDidMount(){
 
+        Events.scrollEvent.register('begin',this.startScrolling)
+
+        Events.scrollEvent.register('end', this.scrollDoneHandler)
+
         this.myRect = this.myRef.current.getBoundingClientRect();
 
          console.log(this.myRect);
@@ -61,7 +66,17 @@ class ProjectViewer extends React.Component{
 
     scrollToMyRef(){
 
-        StartScrolling(this.myRef , this.scrollDoneHandler);
+      let targetPos;
+
+      targetPos = this.myRef.current.getBoundingClientRect().top +window.scrollY;
+
+      console.log("targetPos "+targetPos);
+
+      scroll.scrollTo(targetPos, {
+          duration: 500,
+          delay: 0,
+          smooth: 'easeInOutQuart'
+        })
     }
 
     scrollDoneHandler() {

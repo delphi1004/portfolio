@@ -42,7 +42,7 @@ class MainMenu extends React.Component{
     console.log(this.myRect);
     console.log("main_menu componentDidMount");
 
-    this.setState({myHeight : (this.myRect.height *2)});
+    this.setState({myHeight : (this.myRect.height)*2});
 
     console.log("New Height "+ this.state.myHeight);
 
@@ -58,7 +58,9 @@ class MainMenu extends React.Component{
 
   scrollDoneHandler(){
 
-    
+    console.log("scroll done in main menu");
+
+   // this.setState({myHeight : (this.myRect.height)});
   }
 
   refreshMe(){

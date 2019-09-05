@@ -1,7 +1,6 @@
 import React from "react"
 import "./about.css"
-import StartScrolling from "./smoothScrolling"
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
 
 
 class About extends React.Component{

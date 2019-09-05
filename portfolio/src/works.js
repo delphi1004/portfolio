@@ -1,13 +1,14 @@
 import React from "react"
 import { BrowserRouter as Router, Route, Link , NavLink, Redirect } from "react-router-dom";
+import {Element , Events, animateScroll as scroll, scrollSpy,scroller } from 'react-scroll'
 import "./works.css"
-import StartScrolling from "./smoothScrolling"
 import GenerativeArt from "./generativeart/generativeart"
 import InteractiveArt from "./interactiveart/interactiveart"
 import Modeling3D from "./3dmodeling/3dmodeling"
 import SoftwareDevelopment  from "./softwaredevelopment/softwaredevelopment"
 import ProjectViewer from "./projectViewer"
 import GoBack from "./goBack"
+
 
 
 class Works extends React.Component{
@@ -17,13 +18,13 @@ class Works extends React.Component{
         super();
 
         this.state = {
-          mainOpacity : 0.0,
+          mainOpacity : 1.0,
           goBackOpacity : 0.0,
           goBackSize : "0vw",
-          refreshMe : false,
           refreshKey : 0,
         };
 
+        this.refresh = false;
         this.targetDescription = '';
         this.parent = props.myParent;
         this.checkAutoGoback = false;
@@ -37,28 +38,37 @@ class Works extends React.Component{
 
       console.log(this.myRect);
 
-        this.myRect = this.myRef.current.getBoundingClientRect();
+      Events.scrollEvent.register('begin',this.startScrolling)
 
-       // this.myRect.height -= this.props.myParent.myRect.height;
+      Events.scrollEvent.register('end', this.scrollDoneHandler)
 
-        console.log(this.myRect);
- 
-        this.scrollToMyRef();
+      this.myRect = this.myRef.current.getBoundingClientRect();
+       
+      this.scrollToMyRef();
 
-        window.addEventListener('scroll', this.onScroll);
+      window.addEventListener('scroll', this.onScroll);
+
+      console.log("works mounted!");
      }
  
      componentWillUnmount(){
 
+      console.log("works Unmounted!");
       window.removeEventListener('scroll', this.onScroll);
      }
 
      scrollToMyRef(){
 
-      StartScrolling(this.myRef , this.scrollDoneHandler);
+      scroller.scrollTo('scroll_to_works', {
+          duration: 500,
+          delay: 0,
+          smooth: 'easeInOutQuart'
+        })
      }
     
      scrollDoneHandler(){
+
+      console.log("scrollDoneHandler called in works")
 
       this.checkAutoGoback = true;
     }
@@ -71,7 +81,7 @@ class Works extends React.Component{
 
       this.scrollToMyRef();
 
-      this.setState({refreshMe : true});
+      this.refresh = true;
     }
 
     onScroll(event){
@@ -88,7 +98,11 @@ class Works extends React.Component{
         activeRatio = posRatio;
        }
 
-       console.log(posRatio + "  activeRatio = " + activeRatio);
+      // console.log(posRatio + "  activeRatio = " + activeRatio);
+
+     //  console.log(posRatio + "  activeRatio = " + activeRatio);
+
+       console.log(window.scrollY);
 
        this.setState({mainOpacity : activeRatio});
 
@@ -129,25 +143,15 @@ class Works extends React.Component{
         this.targetDescription = targetDescription;
       }
     }
-
-    displayShortMenu(props){
-
-        return(
     
-          <div className = "work_short_menu">
-    
-            <NavLink  id = "link_text_home" to="/works" onClick ={()=> props.handler(0)}>/back</NavLink><br/>
-      
-          </div>
-        );
-    }
-
     displayFullMenu(props) {
     
         return (
         
           <div>
 
+            <Element name="scroll_to_works" style = {{marginBottom : '150px', opacity :0}}>w</Element>
+  
             <div style = {{opacity : props.mainOpacity}}>
               <h1>works</h1>
 
@@ -172,9 +176,9 @@ class Works extends React.Component{
   
     render(){
 
-      if (this.state.refreshMe === true){
+      if (this.refresh === true){
 
-        this.setState({refreshMe : false});
+        this.refresh = false
   
         return(
           <Router >
