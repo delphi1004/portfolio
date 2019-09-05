@@ -90,9 +90,9 @@ class Works extends React.Component{
       let activeRatio = 0;
       const rect = this.myRef.current.getBoundingClientRect();
 
-      /// posRatio = (150 - rect.y) / 150;
+      // posRatio = (350 - rect.y) / 350;
 
-       posRatio = (this.myRect.y/1 - rect.y) / (this.myRect.y/1);
+      posRatio = (this.myRect.y/1 - rect.y) / (this.myRect.y/1);
 
        if (posRatio >= 1){
         activeRatio = (2 - posRatio);
@@ -119,7 +119,7 @@ class Works extends React.Component{
         }
       }
 
-      if (this.checkAutoGoback === true && posRatio < 0.2){
+      if (this.checkAutoGoback === true && posRatio < 0.7){
 
         window.removeEventListener('scroll', this.onScroll);
 
