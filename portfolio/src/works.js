@@ -119,6 +119,8 @@ class Works extends React.Component{
         }
       }
 
+      console.log(posRatio);
+
       if (this.checkAutoGoback === true && posRatio < 0.8){
 
         window.removeEventListener('scroll', this.onScroll);
