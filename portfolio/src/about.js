@@ -78,6 +78,7 @@ class About extends React.Component{
         this.setState({opacity : posRatio});
     
         if (this.checkAutoGoback === true && posRatio < 0.2){
+           window.removeEventListener('scroll', this.onScroll);
            this.parent.refreshMe();
         }
      }

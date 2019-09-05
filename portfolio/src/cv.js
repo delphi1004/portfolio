@@ -1,5 +1,5 @@
 import React from "react"
-import StartScrolling from "./smoothScrolling"
+import {Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
 import JohnLeeCV from "./resources/JohnLee_CV.pdf"
 import "./cv.css"
 
@@ -27,6 +27,12 @@ class CV extends React.Component{
 
         console.log("componentDidMount About");
 
+        Events.scrollEvent.register('begin',this.startScrolling)
+
+        Events.scrollEvent.register('end', this.scrollDoneHandler)
+
+        scrollSpy.update();
+
         this.state.opacity = 0;
 
         this.myRect = this.myRef.current.getBoundingClientRect();
@@ -50,7 +56,17 @@ class CV extends React.Component{
 
     scrollToMyRef(){
 
-        StartScrolling(this.myRef , this.scrollDoneHandler);
+        let targetPos;
+
+        targetPos = this.myRef.current.getBoundingClientRect().top +window.scrollY;
+
+        console.log("targetPos "+targetPos);
+
+        scroll.scrollTo(targetPos, {
+            duration: 500,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+          })
     }
 
     onScroll(event){

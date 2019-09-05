@@ -90,7 +90,7 @@ class Works extends React.Component{
       let activeRatio = 0;
       const rect = this.myRef.current.getBoundingClientRect();
 
-       posRatio = (300 - rect.y) / 300;
+       posRatio = (550 - rect.y) / 550;
 
        if (posRatio >= 1){
         activeRatio = (2 - posRatio);
@@ -102,7 +102,7 @@ class Works extends React.Component{
 
      //  console.log(posRatio + "  activeRatio = " + activeRatio);
 
-       console.log(window.scrollY);
+     //  console.log(window.scrollY);
 
        this.setState({mainOpacity : activeRatio});
 

@@ -1,7 +1,7 @@
 import React from "react"
 import { BrowserRouter as Router, Route, Link, Redirect} from "react-router-dom";
+import {Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
 import "./main_menu.css"
-import StartScrolling from "./smoothScrolling"
 import About from "./about"
 import Works from "./works"
 import Exhibition from "./exhibition"
@@ -37,6 +37,12 @@ class MainMenu extends React.Component{
 
     this.checkAutoGoback  = false;
 
+    Events.scrollEvent.register('begin',this.startScrolling)
+
+    Events.scrollEvent.register('end', this.scrollDoneHandler)
+
+    scrollSpy.update();
+
     this.myRect = this.myRef.current.getBoundingClientRect();
 
     console.log(this.myRect);
@@ -53,7 +59,13 @@ class MainMenu extends React.Component{
 
   scrollToMyRef(){
 
-    StartScrolling(this.myRef , this.scrollDoneHandler);
+   // StartScrolling(this.myRef , this.scrollDoneHandler);
+
+   scroll.scrollToTop({
+    duration: 500,
+    delay: 0,
+    smooth: 'easeInOutQuart'
+     })
    }
 
   scrollDoneHandler(){
@@ -70,8 +82,6 @@ class MainMenu extends React.Component{
     this.refresh = true;
 
     this.scrollToMyRef();
-
-   // window.location = '/'
   }
 
   menuClicked(id){

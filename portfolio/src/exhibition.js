@@ -1,5 +1,4 @@
 import React from "react"
-import StartScrolling from "./smoothScrolling"
 import ProjectViewer from "./projectViewer"
 import Exhibitions from "./exhibition/exibitions"
 
@@ -10,7 +9,6 @@ class Exhibition extends React.Component{
 
         this.myRef = React.createRef();
         this.targetDescription = "exhibitions"
-
     }
 
     componentDidMount(){

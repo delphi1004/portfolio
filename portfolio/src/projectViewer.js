@@ -1,7 +1,7 @@
 import React from "react"
 import "./projectViewer.css"
 import {Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
-import StartScrolling from "./smoothScrolling"
+
 
 class ProjectViewer extends React.Component{
 
