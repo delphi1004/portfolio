@@ -152,7 +152,7 @@ class Works extends React.Component{
         
           <div>
 
-            <Element name="scroll_to_works" style = {{marginBottom : '230px', opacity :0}}>w</Element>
+            <Element name="scroll_to_works" style = {{marginBottom : '250px', opacity :0}}>w</Element>
   
             <div style = {{opacity : props.mainOpacity}}>
               <h1>works</h1>
