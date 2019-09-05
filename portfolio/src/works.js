@@ -90,7 +90,9 @@ class Works extends React.Component{
       let activeRatio = 0;
       const rect = this.myRef.current.getBoundingClientRect();
 
-       posRatio = (550 - rect.y) / 550;
+      /// posRatio = (150 - rect.y) / 150;
+
+       posRatio = (this.myRect.y/1 - rect.y) / (this.myRect.y/1);
 
        if (posRatio >= 1){
         activeRatio = (2 - posRatio);
@@ -150,7 +152,7 @@ class Works extends React.Component{
         
           <div>
 
-            <Element name="scroll_to_works" style = {{marginBottom : '150px', opacity :0}}>w</Element>
+            <Element name="scroll_to_works" style = {{marginBottom : '230px', opacity :0}}>w</Element>
   
             <div style = {{opacity : props.mainOpacity}}>
               <h1>works</h1>
