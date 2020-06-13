@@ -231,7 +231,7 @@ class ProjectViewer extends React.Component{
     }
 
     render(){
-
+        
         let projectBody = this.description.project.map((value,index) =>{return this.createBody(value,index)})
 
         return(
