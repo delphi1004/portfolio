@@ -91,18 +91,12 @@ class About extends React.Component{
 
                 <h1 >John Lee</h1>
                 <h5 style = {{fontSize:'1.3vw', fontWeight:300}}>Software Developer, Media Artist</h5>
-                <p>I have a passion to create a new system and art piece.
-                 I worked for more than 10 years for semiconductor & LCD industry as software developer.
-                 One day, by chance I encountered with a new media art installation. I was shocked at
-                 how the installation gives me an impression. Since that time, I studied new media art
-                 and general design from Art school. My interesting area is interactive art, sound
-                 visualization, and algorithmic drawing. I have a huge enthusiasm to design and implement
-                 creative projects by using different tools such as processing, openFrameworks, and Unity3D.
-                 In addition, I studied computer graphics such as computer graphics pipeline, OpenGL, Shader
-                 coding in my previous master degree study. I think it is beneficial for a developer to have
-                 a varied background including tech, design, and art. I like to work with people who have a
-                 different background, experiences. Also I'd like to teach people who don't have a chance to
-                 though. I’d love for an opportunity to meet and talk further about how we may work together.</p>
+                <p>I am an experienced software developer with mobile dev and media art experience, wanting
+                   to focus on my skills more on creative projects. I have over a decade of professional programming
+                   experience (C#, C++, C, Objective-C). I have experienced with Unity3D and computer
+                   graphics(shader coding, OpenGL, graphics pipeline). I have also made interactive art installations
+                   and released a mobile app on iOS. I want to combine all of those skills to help make a great
+                   creative project. I am looking for creative projects and want to work with passionate people..</p>
             </div>
         );
     }
