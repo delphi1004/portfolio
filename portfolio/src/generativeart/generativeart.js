@@ -73,6 +73,42 @@ function GenerativeArt(){
             },
 
             {
+              "title" : "[ SEEING MUSIC ]",
+    
+              containerColumn : '83% 20%',
+              maxResourceWidth : '20%',
+              tools : "Supervisor : Matti Niinimäki (Aalto University)  Advisor : Nuno Correia (University of Greenwich) , Matti Niinimäki (Aalto University) - Tool : Processing",
+  
+              main_image : {
+                "image" : null,
+                "caption" : null
+              },
+  
+              description : "This project is designed for the expression of name of people. As we have a unique name and it contains memories, identities, and joyful. Hence, I made a shape generator by using openFrameworks. This s/w analysis people name and it generates very unique shapes related to the names. For instance, the first letter is the key value for the whole color scheme and rest of other letters effect on another visual effect.​",
+            
+              resources : [  
+  
+                {
+                  "image" : require("../resources/small/masterthesis_01.jpg"),
+                },
+
+                {
+                  "image" : require("../resources/small/masterthesis_03.jpg"),
+                },
+  
+                {
+                  "image" : require("../resources/small/masterthesis_02.jpg"),
+                },
+
+                {
+                  "image" : require("../resources/small/masterthesis_04.jpg"),
+                },
+              ]
+            
+
+            },
+
+            {
               "title" : "[ DRAWING MACHINE ]",
 
               description : "This project is designed for new type of drawing machine which can draw curves and lines naturally. Morse code is one of significant code to communicate each other. So, the drawing machine will express a Morse code(ex:LOVE) as visual aspect.",
