@@ -90,7 +90,7 @@ class About extends React.Component{
             <div style = {{opacity : this.state.opacity}} ref={this.myRef} className = "about">
 
                 <h1 >John Lee</h1>
-                <h5 style = {{fontSize:'1.3vw', fontWeight:300}}>Software Developer, Media Artist</h5>
+                <h5 style = {{fontSize:'1.3vw', fontWeight:300}}>New Media Artist, Software Developer</h5>
                 <p>I am an experienced software developer with mobile dev and media art experience, wanting
                    to focus on my skills more on creative projects. I have over a decade of professional programming
                    experience (C#, C++, C, Objective-C). I have experienced with Unity3D and computer
