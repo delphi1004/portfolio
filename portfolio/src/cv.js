@@ -1,6 +1,6 @@
 import React from "react"
 import {Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
-import JohnLeeCV from "./resources/JohnLee_CV.pdf"
+import JohnLeeCV from "./resources/JohnLee_CV_2023.pdf"
 import "./cv.css"
 
 
@@ -91,7 +91,7 @@ class CV extends React.Component{
 
                 {/* <object width="100%" height="500%" data={JohnLeeCV} type="application/pdf">   </object> */}
 
-                <object width="100%" height="500%" data={require("./resources/JohnLee_CV.pdf")} type="application/pdf">   </object>
+                <object width="100%" height="500%" data={require("./resources/JohnLee_CV_2023.pdf")} type="application/pdf">   </object>
 
                  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             

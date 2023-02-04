@@ -22,7 +22,7 @@ function GenerativeArt(){
             "caption" : "Sound visualization in 3D sculpture"
           },
 
-          description : "The sound is the one of most sensory information for us to recognize what's going on the outside world. This audible information is mainly focused on our ears to perceive it. Hence, My question is that what happen if we could feel,see and touch this invisible energy. I mean how can our brain interpret the sound if the sound transformed into other medium. Does it help to listen to a sound? or it interrupts to enjoy listen to a sound? In order to do that, I used processing for sound analysis, Maya for build 3D object and laser cutter for cutting paper.",
+          description : "Sound is a crucial source of sensory information for our perception of the external world. While we primarily listen to sound through our ears, what if we could also feel, see, and touch this intangible energy? I am investigating how the brain interprets sound when it is transformed into other mediums. Does this enhance the listening experience or detract from it? To explore this, I employ processing for sound analysis, Maya for 3D object creation, and a laser cutter for paper cutting.",
 
             resources : [
 
@@ -50,7 +50,7 @@ function GenerativeArt(){
               "caption" : null
             },
 
-            description : "This project is designed for the expression of name of people. As we have a unique name and it contains memories, identities, and joyful. Hence, I made a shape generator by using openFrameworks. This s/w analysis people name and it generates very unique shapes related to the names. For instance, the first letter is the key value for the whole color scheme and rest of other letters effect on another visual effect.​",
+            description : "This project expresses the essence of people's names. Our names hold memories, identities, and joy, and are unique to us. Using openFrameworks, I created a shape generator that analyzes a person's name and generates distinct shapes related to it. The first letter serves as the key value for the overall color scheme, while the other letters influence additional visual effects.​",
   
               resources : [  
   
@@ -73,6 +73,37 @@ function GenerativeArt(){
             },
 
             {
+              "title" : "[ BEAUTY OF RANDOMNESS ]",
+    
+              containerColumn : '83% 20%',
+              maxResourceWidth : '30%',
+              tools : "Tool : processing and shader",
+  
+              main_image : {
+                "image" : null,
+                "caption" : null
+              },
+  
+              description : "I am eager to develop an algorithm for a brush and natural color composition. The beauty of randomness makes each render a thrilling moment to see.​",
+    
+                resources : [  
+    
+                  {
+                    "image" : require("../resources/small/random-01.jpg"),
+                  },
+  
+                  {
+                    "image" : require("../resources/small/random-02.jpg"),
+                  },
+    
+                  {
+                    "image" : require("../resources/small/random-03.jpg"),
+                  },
+
+                ]
+              },
+
+            {
               "title" : "[ SEEING MUSIC ]",
     
               containerColumn : '83% 20%',
@@ -84,7 +115,7 @@ function GenerativeArt(){
                 "caption" : null
               },
   
-              description : "Music and visual artwork are a valuable part of our daily life. Since both media induce human emotion, this thesis demonstrates how to convert music into visual artwork such as generative art. Especially, the project shows the method of connecting music emotion to the theme of colour. This thesis describes the human emotional model based on arousal and valence. Also, this thesis explains how colour affects our emotion. In order to connect music emotion into the colour theme, this thesis shows the method to retrieve music information which includes arousal and valence of the music. In order to generate visual artwork from the music, this thesis demonstrates the implementation of working software that integrates music emotion and musical characteristics such as frequency analysis. Besides, this thesis presents how to apply generative artwork into our daily life products.",
+              description : "Music and visual art are integral to our daily lives, influencing our emotions through their sensory experiences. This thesis explores the connection between music and generative art, specifically converting music into visual artwork through a colour theme linked to musical emotion. The project is based on an emotional model of arousal and valence and demonstrates how colour impacts our emotions. The thesis details the process of retrieving musical information, including arousal and valence, and demonstrates the implementation of software that integrates musical emotion and characteristics like frequency analysis. The result is a generative artwork that can be applied to various daily life products.",
             
               resources : [  
   
@@ -111,7 +142,7 @@ function GenerativeArt(){
             {
               "title" : "[ DRAWING MACHINE ]",
 
-              description : "This project is designed for new type of drawing machine which can draw curves and lines naturally. Morse code is one of significant code to communicate each other. So, the drawing machine will express a Morse code(ex:LOVE) as visual aspect.",
+              description : `This project introduces a new type of drawing machine that can create curves and lines with a natural flow. Using Morse code, a well-known method of communication, the drawing machine will convert messages, such as "LOVE," into a visual representation. This allows the machine to express messages in a unique and creative way.`,
     
               containerColumn : "65% 35%",
               maxResourceWidth : "40%",

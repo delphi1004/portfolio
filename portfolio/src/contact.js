@@ -83,14 +83,14 @@ class Contact extends React.Component{
 
                       <div className="hr"><hr /></div><br/><br/>
 
-                      <a href={`mailto:${"lee.cheongun@aalto.fi"}`}><strong>email</strong> - lee.cheongun@aalto.fi</a><br/><br/>
+                      <a href={`mailto:${"delphi1004@hanmail.net"}`}><strong>email</strong> - delphi1004@hanmail.net</a><br/><br/>
 
                       <a href="https://www.linkedin.com/in/delphi1004/" target="_blank"><strong>linkedin</strong> - Delphi1004</a><br/><br/>
 
+                      <a href="https://www.instagram.com/delphi1004/" target="_blank"><strong>instagram</strong> - Delphi1004</a><br/><br/>
+
                       <a href="https://github.com/delphi1004" target="_blank"><strong>github</strong> - Delphi1004</a><br/><br/>
             
-                      <a><strong>mobile</strong> - (+358) 46 528 7808</a><br/><br/><br/>
-
                       <div className="hr"><hr /></div>
                       
                     </div>

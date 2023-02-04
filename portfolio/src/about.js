@@ -91,12 +91,9 @@ class About extends React.Component{
 
                 <h1 >John Lee</h1>
                 <h5 style = {{fontSize:'1.3vw', fontWeight:300}}>New Media Artist, Software Developer</h5>
-                <p>I am an experienced software developer with mobile dev and media art experience, wanting
-                   to focus on my skills more on creative projects. I have over a decade of professional programming
-                   experience (C#, C++, C, Objective-C). I have experienced with Unity3D and computer
-                   graphics(shader coding, OpenGL, graphics pipeline). I have also made interactive art installations
-                   and released a mobile app on iOS. I want to combine all of those skills to help make a great
-                   creative project. I am looking for creative projects and want to work with passionate people..</p>
+                <p>With over many years of professional programming expertise in languages such as C#, C++, C, JavaScript, TypeScript, and Unity3D, I bring a unique blend of technical and creative skills to the table. My in-depth knowledge of Unity3D and computer graphics, including shader coding, OpenGL, and the graphics pipeline, has made me a seasoned software developer. I also have a background in interactive art installations, which further showcases my creativity as a media artist.
+
+Eager to use my diverse skills to bring success to creative projects, I am seeking opportunities to collaborate with passionate individuals. Let's create something remarkable together.</p>
             </div>
         );
     }

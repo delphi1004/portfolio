@@ -23,7 +23,7 @@ function Exhibitions(){
                 "caption" : "null",
               },
   
-            description : "A light echo is a physical phenomenon caused by light reflected off surfaces and returning to the observer with a relative delay. In this installation the viewer observes the input of hand motion returned to them in an audiovisual form. Moving hand slowly inside the frame the user can examine how the visuals and sounds reflect her movement. The work is created with software tools Kinect, Processing and Pure Data. In this project, my role was to suggest the ideas, concept design, implement a prototype, final system and lead software team. The development tool is processing and I used Kinect sensor to detect audience hand.",
+            description : "In this interactive installation, the viewer experiences the fascinating phenomenon of light echoes. By moving their hand slowly within the frame, they can observe how their hand movements are reflected back in an audiovisual form. The project combines the use of a Kinect sensor, Processing, and Pure Data software tools to detect and reflect the audience's hand motion. As a team leader, I was responsible for suggesting ideas, conceptualizing the design, implementing a prototype, and overseeing the development of the final system using Processing. The aim of the project is to provide a unique and immersive experience that showcases the beauty of light echoes.",
   
               resources : [
   
