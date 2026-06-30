@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import AnimatedPage from '../components/AnimatedPage'
+import Block from '../components/Block'
 import './Contact.scss'
 
 const contacts = [
@@ -25,10 +26,10 @@ const contacts = [
   },
 ]
 
-export default function Contact() {
-  return (
+const Contact = () => (
     <AnimatedPage>
       <div className="contact">
+        <Block>
         <div className="contact__header">
           <span className="contact__label">/ contact</span>
           <h1 className="contact__name">John Lee</h1>
@@ -61,7 +62,9 @@ export default function Contact() {
         </ul>
 
         <div className="contact__divider" />
+        </Block>
       </div>
     </AnimatedPage>
-  )
-}
+)
+
+export default Contact

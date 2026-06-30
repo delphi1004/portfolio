@@ -9,7 +9,7 @@ const links = [
   { to: '/contact',    label: 'Contact' },
 ]
 
-export default function Nav() {
+const Nav = () => {
   const location = useLocation()
   const isHome = location.pathname === '/'
 
@@ -35,3 +35,5 @@ export default function Nav() {
     </nav>
   )
 }
+
+export default Nav

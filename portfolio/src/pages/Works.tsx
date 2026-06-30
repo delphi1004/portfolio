@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import AnimatedPage from '../components/AnimatedPage'
+import Block from '../components/Block'
 import ProjectViewer from '../components/ProjectViewer'
 import generativeArt from '../data/generativeart'
 import interactiveArt from '../data/interactiveart'
@@ -10,13 +11,13 @@ import type { WorkDescription } from '../data/types'
 import './Works.scss'
 
 const categories: { label: string; data: WorkDescription }[] = [
+  { label: 'Software Development', data: softwareDevelopment },
   { label: 'Generative Art',       data: generativeArt },
   { label: 'Interactive Project',  data: interactiveArt },
   { label: '3D Modeling',          data: modeling3d },
-  { label: 'Software Development', data: softwareDevelopment },
 ]
 
-export default function Works() {
+const Works = () => {
   const [selected, setSelected] = useState<WorkDescription | null>(null)
 
   return (
@@ -44,30 +45,34 @@ export default function Works() {
             transition={{ duration: 0.3 }}
             className="works"
           >
-            <div className="works__header">
-              <span className="works__label">/ works</span>
-              <h1 className="works__title">Selected Works</h1>
-            </div>
+            <Block>
+              <div className="works__header">
+                <span className="works__label">/ works</span>
+                <h1 className="works__title">Selected Works</h1>
+              </div>
 
-            <div className="works__grid">
-              {categories.map(({ label, data }, i) => (
-                <motion.button
-                  key={label}
-                  className="works__card"
-                  onClick={() => setSelected(data)}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.08 + 0.2, duration: 0.4 }}
-                >
-                  <span className="works__card-num">0{i + 1}</span>
-                  <h2 className="works__card-title">{label}</h2>
-                  <span className="works__card-arrow">→</span>
-                </motion.button>
-              ))}
-            </div>
+              <div className="works__list">
+                {categories.map(({ label, data }, i) => (
+                  <motion.button
+                    key={label}
+                    className="works__item"
+                    onClick={() => setSelected(data)}
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.07 + 0.15, duration: 0.4 }}
+                  >
+                    <span className="works__item-num">0{i + 1}</span>
+                    <h2 className="works__item-title">{label}</h2>
+                    <span className="works__item-arrow">↗</span>
+                  </motion.button>
+                ))}
+              </div>
+            </Block>
           </motion.div>
         )}
       </AnimatePresence>
     </AnimatedPage>
   )
 }
+
+export default Works

@@ -17,14 +17,17 @@
 }
 
 @mixin page-padding {
-  padding: calc($nav-height + 80px) 8% 120px;
+  padding-top: calc($nav-height + 80px);
+  padding-bottom: 120px;
 
   @include respond-to(tablet) {
-    padding: calc($nav-height + 60px) 6% 80px;
+    padding-top: calc($nav-height + 60px);
+    padding-bottom: 80px;
   }
 
   @include respond-to(mobile) {
-    padding: calc($nav-height + 40px) 5% 60px;
+    padding-top: calc($nav-height + 40px);
+    padding-bottom: 60px;
   }
 }
 

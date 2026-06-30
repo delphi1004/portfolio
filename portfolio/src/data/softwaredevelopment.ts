@@ -1,50 +1,52 @@
 import type { WorkDescription } from './types'
 
-import sw01 from '../resources/softwaredevelopment_01.png'
-import sw03 from '../resources/softwaredevelopment_03.png'
-import sw04 from '../resources/softwaredevelopment_04.png'
-import sw05 from '../resources/softwaredevelopment_05.png'
-import sw06 from '../resources/softwaredevelopment_06.png'
-import sw07 from '../resources/softwaredevelopment_07.png'
-import ns05 from '../resources/naturalsound_05.PNG'
 
 const softwareDevelopment: WorkDescription = {
   category: {
     name: '[ software development ]',
-    description: 'Software architecture design is similar to designing a city',
+    description:
+      'To me, software architecture design is just like designing a city — planning and organizing various components and structures to create a functional and scalable system.',
   },
   project: [
     {
-      title: '[ AUTOMATED EQUIPMENT S/W DESIGN ]',
-      containerColumn: '49% 40%',
-      maxResourceWidth: '48%',
-      tools: 'Tool: UML, C++, C#',
-      main_image: {
-        image: sw01,
-        caption: 'Software architecture design for automated AFM',
-      },
+      title: '[ FRONTEND DEVELOPMENT ]',
+      containerColumn: '100%',
+      tools:
+        'React · Next.js · Gatsby · TypeScript · Sass · styled-components · Tailwind · Storybook · Jest · Cypress · Magnolia · Contentful · Sanity.io · WordPress',
       description:
-        'The measurement is needed for the production of semiconductor after Etch process. The old method damages the surface of Wafer cause of using profiler, so we could not measure the part of transistor for the real circuit. This is the automated S/W project which used for semiconductor 300mm & LCD FAB. For the perfect automatic system, communicate with the host of customer and SECS (SEMI Equipment Communications Standard) Message formulation.',
+        'I have developed a deep understanding of frontend technologies, including HTML, CSS, JavaScript, TypeScript and React. I am passionate about designing and implementing interactive websites that captivate users and encourage them to engage with the content actively.',
       resources: [
-        { image: sw05, text: null },
-        { image: sw03, text: 'Sequence diagram of loading wafer' },
-        { image: sw04, text: null },
         {
-          text: "Most of equipment companies develop their s/w depend on what kind of 3rd party dll or library use for control devices. Imagine if you need a change system HW components in the field according to customer specs. In this case, the entire low-level device control code must be re-written. To avoid this fundamental problem, I designed a multi-action 'virtual device' concept treating component control at a high level of abstraction.",
+          url: 'https://www.workinfinland.com/en/',
+          urlLabel: 'workinfinland.com',
+          text: 'React · Next.js · TypeScript · Sass · Storybook · Jest · Cypress · Magnolia',
         },
-        { image: sw06, text: null },
-        { image: sw07, text: null },
+        {
+          url: 'https://tykkimakiresort.fi/en/',
+          urlLabel: 'tykkimakiresort.fi',
+          text: 'React · Gatsby · TypeScript · styled-components · Storybook · Jest · Cypress · WordPress',
+        },
+        {
+          url: 'https://www.whyenergyefficiency.com/',
+          urlLabel: 'whyenergyefficiency.com',
+          text: 'React · TypeScript · Tailwind · Storybook · Jest · Sanity.io',
+        },
+        {
+          url: 'https://www.s-kanava.fi/',
+          urlLabel: 's-kanava.fi',
+          text: 'React · Gatsby · TypeScript · styled-components · Storybook · Jest · Cypress · WordPress',
+        },
+        {
+          url: 'https://www.fonum.fi/',
+          urlLabel: 'fonum.fi',
+          text: 'React · TypeScript · Sass · Contentful',
+        },
+        {
+          url: 'https://www.metsanarvo.fi/',
+          urlLabel: 'metsanarvo.fi',
+          text: 'React · Next.js · TypeScript · Sass · Sanity.io',
+        },
       ],
-    },
-    {
-      title: '[ NATURAL SOUND APP ]',
-      containerColumn: '49% 20%',
-      maxResourceWidth: '90%',
-      tools: 'Tool: Xcode, Objective-C',
-      main_image: null,
-      description:
-        'Become part of nature while listening to nature in your busy everyday life anywhere and at any time. 100% purely a natural sound. There is absolutely no advertisement. The developer personally went to the field to record each sound with care.',
-      resources: [{ image: ns05, text: 'Simple and easy to use' }],
     },
   ],
 }

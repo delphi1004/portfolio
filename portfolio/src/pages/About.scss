@@ -3,7 +3,6 @@
 
 .about {
   @include page-padding;
-  max-width: 900px;
 
   &__label {
     display: block;
@@ -49,28 +48,55 @@
   &__skills {
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    border: 1px solid $border;
+
+    @include respond-to(tablet) {
+      grid-template-columns: 1fr;
+    }
   }
 
-  &__skill-group {
-    border-top: 1px solid $border;
-    padding-top: 1.2rem;
+  &__skill-card {
+    padding: 2rem;
+    background: $bg-card;
+    transition: background $transition-fast;
+
+    &:hover {
+      background: $bg-hover;
+    }
+  }
+
+  &__skill-icon {
+    display: block;
+    font-size: 1.4rem;
+    color: $accent;
+    margin-bottom: 1.2rem;
+    line-height: 1;
   }
 
   &__skill-title {
     font-size: 0.65rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: $accent;
+    color: $text-primary;
     font-weight: $weight-regular;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
   }
 
-  &__skill-list {
-    font-size: 0.85rem;
-    font-weight: $weight-light;
+  &__skill-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  &__skill-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.65rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid $border;
     color: $text-secondary;
-    line-height: 1.7;
+    letter-spacing: 0.3px;
   }
 }

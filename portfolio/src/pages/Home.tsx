@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import Block from '../components/Block'
 import './Home.scss'
 
 const links = [
@@ -20,9 +21,9 @@ const item = {
   show:   { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
 }
 
-export default function Home() {
-  return (
+const Home = () => (
     <div className="home">
+      <Block>
       <div className="home__content">
         <motion.div
           className="home__identity"
@@ -49,6 +50,7 @@ export default function Home() {
           ))}
         </motion.nav>
       </div>
+      </Block>
 
       <motion.div
         className="home__footer"
@@ -59,5 +61,6 @@ export default function Home() {
         <span>Seoul · Finland</span>
       </motion.div>
     </div>
-  )
-}
+)
+
+export default Home

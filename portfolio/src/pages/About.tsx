@@ -1,10 +1,11 @@
 import AnimatedPage from '../components/AnimatedPage'
+import Block from '../components/Block'
 import './About.scss'
 
-export default function About() {
-  return (
+const About = () => (
     <AnimatedPage>
       <div className="about">
+        <Block>
         <div className="about__header">
           <span className="about__label">/ about</span>
           <h1 className="about__name">John Lee</h1>
@@ -28,21 +29,38 @@ export default function About() {
           </p>
 
           <div className="about__skills">
-            <div className="about__skill-group">
-              <h3 className="about__skill-title">Languages</h3>
-              <p className="about__skill-list">C# · C++ · C · JavaScript · TypeScript · Objective-C</p>
-            </div>
-            <div className="about__skill-group">
-              <h3 className="about__skill-title">Tools & Frameworks</h3>
-              <p className="about__skill-list">Unity3D · openFrameworks · Processing · Arduino · React</p>
-            </div>
-            <div className="about__skill-group">
-              <h3 className="about__skill-title">3D & Graphics</h3>
-              <p className="about__skill-list">Fusion 360 · Maya · OpenGL · Shader coding · GLSL</p>
-            </div>
+            {[
+              {
+                icon: '⬡',
+                title: 'Frontend',
+                tags: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML / CSS', 'Tailwind', 'Sass', 'styled-components', 'Shopify'],
+              },
+              {
+                icon: '◈',
+                title: 'Creative Coding',
+                tags: ['Unity3D', 'Unreal Engine', 'Processing', 'OpenGL / GLSL', 'VFX Graph', 'Shader Graph', 'C# / C++', 'Arduino'],
+              },
+              {
+                icon: '◎',
+                title: 'Tools & Design',
+                tags: ['Storybook', 'Jest', 'Cypress', 'Sanity.io', 'Contentful', 'Magnolia', 'Fusion 360', 'Maya'],
+              },
+            ].map(({ icon, title, tags }) => (
+              <div key={title} className="about__skill-card">
+                <span className="about__skill-icon">{icon}</span>
+                <h3 className="about__skill-title">{title}</h3>
+                <ul className="about__skill-tags">
+                  {tags.map(tag => (
+                    <li key={tag} className="about__skill-tag">{tag}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
+        </Block>
       </div>
     </AnimatedPage>
-  )
-}
+)
+
+export default About

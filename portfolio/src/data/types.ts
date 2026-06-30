@@ -4,6 +4,8 @@ export interface Resource {
   text?: string | null;
   height?: string;
   caption?: string | null;
+  url?: string;
+  urlLabel?: string;
 }
 
 export interface Project {

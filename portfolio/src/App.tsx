@@ -8,7 +8,7 @@ import Exhibition from './pages/Exhibition'
 import CV from './pages/CV'
 import Contact from './pages/Contact'
 
-function AnimatedRoutes() {
+const AnimatedRoutes = () => {
   const location = useLocation()
 
   return (
@@ -25,11 +25,11 @@ function AnimatedRoutes() {
   )
 }
 
-export default function App() {
-  return (
-    <HashRouter>
-      <Nav />
-      <AnimatedRoutes />
-    </HashRouter>
-  )
-}
+const App = () => (
+  <HashRouter>
+    <Nav />
+    <AnimatedRoutes />
+  </HashRouter>
+)
+
+export default App

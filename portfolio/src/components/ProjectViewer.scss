@@ -66,11 +66,20 @@
     margin-bottom: 0.5rem;
   }
 
-  &__project-tools {
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    color: $accent;
-    font-weight: $weight-light;
+  &__project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.8rem;
+  }
+
+  &__tag {
+    font-size: 0.68rem;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid $border;
+    color: $text-secondary;
+    letter-spacing: 0.3px;
+    background: rgba(255, 255, 255, 0.03);
   }
 
   &__project-body {
@@ -122,6 +131,68 @@
     &--text {
       flex: 1 1 100%;
     }
+
+    &--link {
+      flex: 1 1 calc(50% - 0.5rem);
+
+      @include respond-to(mobile) {
+        flex: 1 1 100%;
+      }
+    }
+  }
+
+  &__link-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.1rem 1.3rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid $border;
+    border-left: 2px solid transparent;
+    text-decoration: none;
+    transition: border-color $transition-fast, background $transition-fast;
+
+    &:hover {
+      background: $bg-hover;
+      border-left-color: $accent;
+
+      .pv__link-arrow {
+        color: $accent;
+        transform: translate(2px, -2px);
+      }
+
+      .pv__link-label {
+        color: $text-primary;
+      }
+    }
+  }
+
+  &__link-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__link-label {
+    font-size: 0.85rem;
+    font-weight: $weight-light;
+    color: rgba($text-primary, 0.85);
+    transition: color $transition-fast;
+  }
+
+  &__link-arrow {
+    font-size: 0.8rem;
+    color: $text-secondary;
+    flex-shrink: 0;
+    transition: color $transition-fast, transform $transition-normal;
+  }
+
+  &__link-stack {
+    font-size: 0.65rem;
+    color: $text-secondary;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
   }
 
   &__video-wrapper {

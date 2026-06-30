@@ -23,84 +23,72 @@
     letter-spacing: -1px;
   }
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    border: 1px solid $border;
-
-    @include respond-to(mobile) {
-      grid-template-columns: 1fr;
-    }
+  &__list {
+    border-top: 1px solid $border;
   }
 
-  &__card {
+  &__item {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 2.5rem;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+    padding: 2.2rem 0;
     border: none;
-    background: $bg-card;
+    border-bottom: 1px solid $border;
+    background: none;
     text-align: left;
     cursor: pointer;
-    transition: background $transition-fast;
-    outline: none;
+    font-family: $font;
     position: relative;
-    overflow: hidden;
 
-    &::before {
+    &::after {
       content: '';
       position: absolute;
-      bottom: 0;
       left: 0;
+      bottom: 0;
       width: 0;
-      height: 2px;
+      height: 1px;
       background: $accent;
       transition: width $transition-normal;
     }
 
     &:hover {
-      background: $bg-hover;
+      &::after { width: 100%; }
 
-      &::before {
-        width: 100%;
-      }
-
-      .works__card-arrow {
-        color: $accent;
-        transform: translateX(4px);
-      }
-
-      .works__card-title {
-        color: $text-primary;
-      }
+      .works__item-num { color: $accent; }
+      .works__item-title { color: $text-primary; }
+      .works__item-arrow { color: $accent; transform: translate(3px, -3px); }
     }
 
     &:focus-visible {
-      outline: 1px solid $accent;
+      outline: none;
+      .works__item-title { color: $accent; }
     }
   }
 
-  &__card-num {
-    font-size: 0.65rem;
+  &__item-num {
+    font-size: 0.6rem;
     letter-spacing: 3px;
-    color: $accent;
-    font-weight: $weight-regular;
-  }
-
-  &__card-title {
-    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
-    font-weight: $weight-light;
     color: $text-secondary;
-    letter-spacing: 1px;
+    min-width: 2rem;
     transition: color $transition-fast;
-    flex: 1;
+    font-weight: $weight-regular;
+    padding-top: 0.2rem;
   }
 
-  &__card-arrow {
+  &__item-title {
+    flex: 1;
+    font-size: clamp(1.6rem, 3.5vw, 3rem);
+    font-weight: $weight-thin;
+    color: $text-secondary;
+    letter-spacing: -0.5px;
+    transition: color $transition-fast;
+  }
+
+  &__item-arrow {
     font-size: 1.1rem;
     color: $text-secondary;
     transition: color $transition-fast, transform $transition-normal;
-    align-self: flex-end;
+    flex-shrink: 0;
   }
 }
