@@ -1,0 +1,53 @@
+@use 'variables' as *;
+
+@mixin respond-to($bp) {
+  @if $bp == mobile {
+    @media (max-width: $bp-mobile) { @content; }
+  } @else if $bp == tablet {
+    @media (max-width: $bp-tablet) { @content; }
+  } @else if $bp == desktop {
+    @media (min-width: $bp-desktop) { @content; }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin page-padding {
+  padding: calc($nav-height + 80px) 8% 120px;
+
+  @include respond-to(tablet) {
+    padding: calc($nav-height + 60px) 6% 80px;
+  }
+
+  @include respond-to(mobile) {
+    padding: calc($nav-height + 40px) 5% 60px;
+  }
+}
+
+@mixin link-reset {
+  color: inherit;
+  text-decoration: none;
+}
+
+@mixin accent-underline {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: $accent;
+    transition: width $transition-normal;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}

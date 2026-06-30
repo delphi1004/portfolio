@@ -1,0 +1,102 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8%;
+  position: relative;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 4rem;
+
+    @include respond-to(tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+    }
+  }
+
+  &__identity {
+    flex: 1;
+  }
+
+  &__name {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: $weight-thin;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: $text-primary;
+    margin-bottom: 1rem;
+  }
+
+  &__role {
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    font-weight: $weight-light;
+    color: $text-secondary;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+
+    @include respond-to(tablet) {
+      align-items: flex-start;
+    }
+  }
+
+  &__nav-link {
+    display: block;
+    font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+    font-weight: $weight-thin;
+    letter-spacing: 3px;
+    color: $text-secondary;
+    text-decoration: none;
+    transition: color $transition-fast, letter-spacing $transition-normal;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 1px;
+      background: $accent;
+      transition: width $transition-normal;
+
+      @include respond-to(tablet) {
+        left: 0;
+        right: auto;
+      }
+    }
+
+    &:hover {
+      color: $text-primary;
+      letter-spacing: 5px;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 8%;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $border;
+  }
+}

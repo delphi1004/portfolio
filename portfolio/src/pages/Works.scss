@@ -1,0 +1,106 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.works {
+  @include page-padding;
+
+  &__header {
+    margin-bottom: 4rem;
+  }
+
+  &__label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: $weight-thin;
+    letter-spacing: -1px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    border: 1px solid $border;
+
+    @include respond-to(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2.5rem;
+    border: none;
+    background: $bg-card;
+    text-align: left;
+    cursor: pointer;
+    transition: background $transition-fast;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: $accent;
+      transition: width $transition-normal;
+    }
+
+    &:hover {
+      background: $bg-hover;
+
+      &::before {
+        width: 100%;
+      }
+
+      .works__card-arrow {
+        color: $accent;
+        transform: translateX(4px);
+      }
+
+      .works__card-title {
+        color: $text-primary;
+      }
+    }
+
+    &:focus-visible {
+      outline: 1px solid $accent;
+    }
+  }
+
+  &__card-num {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: $accent;
+    font-weight: $weight-regular;
+  }
+
+  &__card-title {
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    font-weight: $weight-light;
+    color: $text-secondary;
+    letter-spacing: 1px;
+    transition: color $transition-fast;
+    flex: 1;
+  }
+
+  &__card-arrow {
+    font-size: 1.1rem;
+    color: $text-secondary;
+    transition: color $transition-fast, transform $transition-normal;
+    align-self: flex-end;
+  }
+}

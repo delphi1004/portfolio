@@ -1,0 +1,71 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  border-bottom: 1px solid $border;
+  background: rgba($bg, 0.85);
+  backdrop-filter: blur(12px);
+  transition: background $transition-normal, border-color $transition-normal;
+
+  &--home {
+    background: transparent;
+    border-color: transparent;
+  }
+
+  &__logo {
+    font-size: 1rem;
+    font-weight: $weight-medium;
+    letter-spacing: 3px;
+    color: $text-primary;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+
+    @include respond-to(mobile) {
+      gap: 1.2rem;
+    }
+  }
+
+  &__link {
+    font-size: 0.75rem;
+    font-weight: $weight-light;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $text-secondary;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $text-primary;
+    }
+
+    &--active {
+      color: $accent;
+    }
+
+    @include respond-to(mobile) {
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+    }
+  }
+}

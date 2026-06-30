@@ -1,0 +1,76 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.about {
+  @include page-padding;
+  max-width: 900px;
+
+  &__label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 2rem;
+  }
+
+  &__name {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: $weight-thin;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 0.8rem;
+  }
+
+  &__role {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $text-secondary;
+    margin-bottom: 3rem;
+  }
+
+  &__divider {
+    width: 40px;
+    height: 1px;
+    background: $accent;
+    margin-bottom: 2.5rem;
+  }
+
+  &__bio {
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    font-weight: $weight-light;
+    line-height: 1.9;
+    color: rgba($text-primary, 0.8);
+    margin-bottom: 1.5rem;
+    max-width: 680px;
+  }
+
+  &__skills {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  &__skill-group {
+    border-top: 1px solid $border;
+    padding-top: 1.2rem;
+  }
+
+  &__skill-title {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $accent;
+    font-weight: $weight-regular;
+    margin-bottom: 0.8rem;
+  }
+
+  &__skill-list {
+    font-size: 0.85rem;
+    font-weight: $weight-light;
+    color: $text-secondary;
+    line-height: 1.7;
+  }
+}

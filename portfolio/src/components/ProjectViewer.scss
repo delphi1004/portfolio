@@ -1,0 +1,160 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.pv {
+  @include page-padding;
+
+  &__header {
+    margin-bottom: 4rem;
+  }
+
+  &__back {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $text-secondary;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 2rem;
+    font-family: $font;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: $weight-thin;
+    letter-spacing: 2px;
+    color: $text-primary;
+    margin-bottom: 0.6rem;
+  }
+
+  &__category-desc {
+    font-size: 0.85rem;
+    color: $text-secondary;
+    font-weight: $weight-light;
+    letter-spacing: 0.5px;
+  }
+
+  &__projects {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  &__project {
+    border-top: 1px solid $border;
+    padding-top: 2.5rem;
+  }
+
+  &__project-header {
+    margin-bottom: 2rem;
+  }
+
+  &__project-title {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-weight: $weight-light;
+    letter-spacing: 1px;
+    color: $text-primary;
+    margin-bottom: 0.5rem;
+  }
+
+  &__project-tools {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: $accent;
+    font-weight: $weight-light;
+  }
+
+  &__project-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: start;
+
+    @include respond-to(tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__project-desc {
+    font-size: 0.9rem;
+    line-height: 1.85;
+    color: rgba($text-primary, 0.75);
+    font-weight: $weight-light;
+  }
+
+  &__main-media {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__resources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  &__resource {
+    flex: 0 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    &--video {
+      flex: 1 1 300px;
+    }
+
+    &--text {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: $bg-card;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+
+  &__caption {
+    margin-top: 0.5rem;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    color: $text-secondary;
+    font-style: italic;
+  }
+
+  &__text-block {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: rgba($text-primary, 0.7);
+    font-weight: $weight-light;
+    padding: 1.5rem;
+    background: $bg-card;
+    border-left: 2px solid $accent;
+  }
+}

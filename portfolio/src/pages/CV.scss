@@ -1,0 +1,67 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.cv {
+  @include page-padding;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  min-height: calc(100vh - $nav-height);
+
+  &__header {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: $accent;
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: $weight-thin;
+    letter-spacing: -0.5px;
+  }
+
+  &__download {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $text-secondary;
+    text-decoration: none;
+    margin-left: auto;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__viewer {
+    flex: 1;
+    min-height: 80vh;
+    background: $bg-card;
+    border: 1px solid $border;
+    border-radius: 2px;
+    overflow: hidden;
+
+    object {
+      display: block;
+    }
+  }
+
+  &__fallback {
+    padding: 2rem;
+    color: $text-secondary;
+    font-size: 0.9rem;
+
+    a {
+      color: $accent;
+    }
+  }
+}

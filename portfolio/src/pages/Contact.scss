@@ -1,0 +1,96 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.contact {
+  @include page-padding;
+  max-width: 700px;
+
+  &__header {
+    margin-bottom: 3rem;
+  }
+
+  &__label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 1.5rem;
+  }
+
+  &__name {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: $weight-thin;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 0.8rem;
+  }
+
+  &__role {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $text-secondary;
+  }
+
+  &__divider {
+    width: 100%;
+    height: 1px;
+    background: $border;
+    margin: 2rem 0;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid $border;
+
+    @include respond-to(mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+  }
+
+  &__item-label {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $text-secondary;
+    min-width: 100px;
+  }
+
+  &__item-link {
+    font-size: 0.95rem;
+    font-weight: $weight-light;
+    color: $text-primary;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__item-arrow {
+    font-size: 0.8rem;
+    color: $text-secondary;
+    transition: color $transition-fast;
+
+    .contact__item-link:hover & {
+      color: $accent;
+    }
+  }
+}
