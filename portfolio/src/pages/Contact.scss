@@ -25,6 +25,15 @@
     color: $text-secondary;
   }
 
+  &__intro {
+    max-width: 560px;
+    margin-top: 2rem;
+    font-size: clamp(1.05rem, 2vw, 1.5rem);
+    line-height: 1.45;
+    font-weight: $weight-light;
+    color: $text-primary;
+  }
+
   &__divider {
     width: 100%;
     height: 1px;
@@ -50,6 +59,16 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 0.4rem;
+    }
+
+    &--primary {
+      .contact__item-link {
+        color: $accent;
+      }
+
+      .contact__item-arrow {
+        color: $accent;
+      }
     }
   }
 

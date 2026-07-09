@@ -16,6 +16,9 @@ const cleanTitle = (value: string) =>
     .toLowerCase()
     .replace(/\b\w/g, char => char.toUpperCase())
 
+const resourceCountClass = (count: number) =>
+  count > 4 ? 'many' : String(count)
+
 interface LightboxImage {
   src: string
   alt: string
@@ -200,7 +203,7 @@ const ProjectViewer = ({ data, onBack }: Props) => {
 
               {proj.resources && proj.resources.length > 0 && (
                 <div
-                  className={`pv__resources pv__resources--count-${Math.min(proj.resources.length, 4)}`}
+                  className={`pv__resources pv__resources--count-${resourceCountClass(proj.resources.length)}`}
                 >
                   {proj.resources.map((res, j) => (
                     <ResourceItem

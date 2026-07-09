@@ -232,9 +232,28 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
+    &--count-many {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      .pv__image-button {
+        aspect-ratio: 4 / 3;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .pv__resource--video {
+        grid-column: 1 / -1;
+      }
+    }
+
     @include respond-to(tablet) {
       &--count-3,
-      &--count-4 {
+      &--count-4,
+      &--count-many {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
@@ -243,7 +262,8 @@
       grid-template-columns: 1fr;
 
       &--count-3,
-      &--count-4 {
+      &--count-4,
+      &--count-many {
         grid-template-columns: 1fr;
       }
     }

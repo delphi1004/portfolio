@@ -18,17 +18,17 @@ import ss12 from '../resources/small/SeeingSound_12.JPG'
 const exhibitions: WorkDescription = {
   category: {
     name: '[ exhibition ]',
-    description: 'It is always a pleasure of having an exhibition in a public place.',
+    description: 'Exhibitions, installations, and public presentations where computational systems meet physical space.',
   },
   project: [
     {
       title: '[ WHEN LIGHT ECHOES ]',
       containerColumn: '49% 40%',
       maxResourceWidth: '30%',
-      tools: 'Group exhibition  26 May – 31 May 2019  aSSIST, Seoul Korea  —  Tool: Processing, Kinect sensor, Pure data',
+      tools: 'Group Exhibition · 26 May - 31 May 2019 · aSSIST, Seoul · Processing / Kinect / Pure Data',
       main_image: { movie: '2yZoM1qjo9o', height: '83%', caption: null },
       description:
-        "In this interactive installation, the viewer experiences the fascinating phenomenon of light echoes. By moving their hand slowly within the frame, they can observe how their hand movements are reflected back in an audiovisual form. The project combines the use of a Kinect sensor, Processing, and Pure Data software tools to detect and reflect the audience's hand motion. As a team leader, I was responsible for suggesting ideas, conceptualizing the design, implementing a prototype, and overseeing the development of the final system using Processing.",
+        "An interactive installation where visitors' hand movements are captured by Kinect and reflected back as audiovisual echoes. I led the concept, prototyping, and final Processing system, shaping the work as a public encounter between gesture, light, and sound.",
       resources: [
         { image: ex03, text: null },
         { image: ex02, text: null },
@@ -44,10 +44,10 @@ const exhibitions: WorkDescription = {
       title: '[ SEEING SOUND, LISTENING TO IMAGE ]',
       containerColumn: '49% 40%',
       maxResourceWidth: '30%',
-      tools: 'Solo exhibition  23 Feb – 03 Mar 2019  Väre gallery V1, Aalto University Finland  —  Tool: openFrameworks C++, Arduino, 3D Printing',
+      tools: 'Solo Exhibition · 23 Feb - 03 Mar 2019 · Väre Gallery V1, Aalto University · openFrameworks / Arduino / 3D Printing',
       main_image: { movie: '3yvqrAyYy-4', height: '83%', caption: null },
       description:
-        'Out of all the sensory stimuli that we process, sound is one of the most recognizable. However, as our ears, not our eyes, are the sensory organ responsible for perceiving and understanding this auditory information. Through my exhibition, I focus on making this unseeable data more tangible, exploring how our brain could potentially interpret sound differently if it was transformed into another medium.',
+        'A solo exhibition exploring how sound can become visible, tactile, and spatial. The work transforms auditory information into images, objects, and interactive systems, asking how perception changes when sound moves into another medium.',
       resources: [
         { image: ss12, text: null },
         { image: ss01, text: null },

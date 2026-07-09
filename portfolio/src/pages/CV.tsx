@@ -8,15 +8,15 @@ const experience = [
     role: 'Senior Front-end Developer',
     location: 'Finland',
     period: 'May 2021 – Present',
-    description: 'Implement various websites by React, Storybook, Gatsby and Next.js',
-    tools: ['JavaScript', 'TypeScript'],
+    description: 'Build content-driven websites and interface systems with React, Next.js, Gatsby, and Storybook.',
+    tools: ['React', 'Next.js', 'TypeScript', 'Storybook'],
   },
   {
     company: 'Thermo Fisher Scientific',
     role: 'Senior Software Engineer',
     location: 'Finland',
     period: 'Oct 2019 – Aug 2020',
-    description: 'Developed and enhanced the lab automation software',
+    description: 'Developed lab automation software for scientific instruments and production workflows.',
     tools: ['C++', 'C#'],
   },
   {
@@ -24,15 +24,15 @@ const experience = [
     role: 'Software Architect',
     location: 'South Korea',
     period: 'Apr 2010 – Feb 2016',
-    description: 'Design system architecture and implement various apps',
-    tools: ['Objective-C'],
+    description: 'Designed software architecture and built mobile applications across client and product projects.',
+    tools: ['Objective-C', 'iOS'],
   },
   {
     company: 'Trient Technologies',
     role: 'Senior Software Developer',
     location: 'South Korea, Canada',
     period: 'Sep 2006 – Mar 2010',
-    description: 'Implemented FDC (Fault Detection and Classification) System',
+    description: 'Implemented fault detection and classification systems for semiconductor manufacturing environments.',
     tools: ['C#', 'Pro*C'],
   },
   {
@@ -40,7 +40,7 @@ const experience = [
     role: 'Senior Software Developer',
     location: 'Japan',
     period: 'Dec 2005 – Sep 2006',
-    description: 'Implemented and system design FDC for a semiconductor fab',
+    description: 'Designed and implemented FDC software for semiconductor fabrication systems.',
     tools: ['C#'],
   },
   {
@@ -48,7 +48,7 @@ const experience = [
     role: 'Senior Software Developer',
     location: 'South Korea',
     period: 'Sep 2001 – Feb 2003',
-    description: 'Designed software architecture and implemented for automated AFM (Atomic Force Microscopy)',
+    description: 'Designed software architecture for automated atomic force microscopy systems.',
     tools: ['C++'],
   },
   {
@@ -56,7 +56,7 @@ const experience = [
     role: 'Senior Software Developer',
     location: 'South Korea',
     period: 'Dec 1999 – Sep 2001',
-    description: 'Developed software for wafer metrology equipment and experienced with Secs/Gem protocol',
+    description: 'Developed wafer metrology software and worked with the SECS/GEM protocol.',
     tools: ['C++'],
   },
 ]
@@ -147,7 +147,11 @@ const CV = () => (
         <div className="cv__header">
           <span className="cv__label">/ cv</span>
           <h1 className="cv__name">John Lee</h1>
-          <p className="cv__role">New Media Artist · Software Developer</p>
+          <p className="cv__role">Software Developer · New Media Artist</p>
+          <p className="cv__intro">
+            I build software systems, content-driven interfaces, and interactive experiences,
+            connecting long-term engineering practice with computational art and public installations.
+          </p>
         </div>
 
         <section className="cv__section">
@@ -186,9 +190,9 @@ const CV = () => (
           ))}
         </section>
 
-        <div className="cv__bottom">
+        <div className="cv__practice">
           <section className="cv__section">
-            <h2 className="cv__section-title">Exhibitions</h2>
+            <h2 className="cv__section-title">Creative Practice</h2>
             {exhibitions.map(({ title, type, venue, period, url }) => (
               <a
                 key={title}
@@ -199,11 +203,10 @@ const CV = () => (
               >
                 <div className="cv__entry-left">
                   <span className="cv__entry-company">{title}</span>
-                  <span className="cv__entry-meta">{period}</span>
+                  <span className="cv__entry-meta">{type} · {period}</span>
                 </div>
                 <div className="cv__entry-right">
-                  <span className="cv__entry-role">{venue}</span>
-                  <span className="cv__tag">{type}</span>
+                  <span className="cv__entry-role cv__entry-role--place">{venue}</span>
                 </div>
                 <span className="cv__entry-arrow">↗</span>
               </a>
@@ -238,6 +241,7 @@ const CV = () => (
             </section>
           </div>
         </div>
+
       </Block>
     </div>
   </AnimatedPage>

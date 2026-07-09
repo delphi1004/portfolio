@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Nav from './components/Nav'
@@ -10,6 +11,10 @@ import Contact from './pages/Contact'
 
 const AnimatedRoutes = () => {
   const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 })
+  }, [location.pathname])
 
   return (
     <AnimatePresence mode="wait">

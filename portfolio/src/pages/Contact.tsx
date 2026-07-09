@@ -34,6 +34,9 @@ const Contact = () => (
           <span className="contact__label">/ contact</span>
           <h1 className="contact__name">John Lee</h1>
           <p className="contact__role">Software Developer · Media Artist</p>
+          <p className="contact__intro">
+            Available for software, interactive media, and exhibition projects.
+          </p>
         </div>
 
         <div className="contact__divider" />
@@ -42,7 +45,7 @@ const Contact = () => (
           {contacts.map(({ label, value, href }, i) => (
             <motion.li
               key={label}
-              className="contact__item"
+              className={`contact__item${label === 'Email' ? ' contact__item--primary' : ''}`}
               initial={{ opacity: 0, x: -16 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.08 + 0.3, duration: 0.4 }}
@@ -55,13 +58,11 @@ const Contact = () => (
                 className="contact__item-link"
               >
                 {value}
-                <span className="contact__item-arrow">↗</span>
+                <span className="contact__item-arrow" aria-hidden="true">↗</span>
               </a>
             </motion.li>
           ))}
         </ul>
-
-        <div className="contact__divider" />
         </Block>
       </div>
     </AnimatedPage>

@@ -5,7 +5,7 @@
   @include page-padding;
 
   &__header {
-    padding-bottom: 3rem;
+    padding-bottom: clamp(3rem, 6vw, 5rem);
     border-bottom: 1px solid $border;
   }
 
@@ -18,12 +18,25 @@
 
   &__name {
     @include type-title;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.75rem;
   }
 
   &__role {
-    @include type-label;
-    color: $text-secondary;
+    max-width: 46rem;
+    font-size: clamp(1.05rem, 1.6vw, 1.4rem);
+    font-weight: $weight-light;
+    line-height: 1.45;
+    letter-spacing: -0.015em;
+    color: rgba($text-primary, 0.78);
+  }
+
+  &__intro {
+    max-width: 43rem;
+    margin-top: clamp(1.4rem, 3vw, 2.4rem);
+    font-size: clamp(1rem, 1.2vw, 1.14rem);
+    font-weight: $weight-light;
+    line-height: 1.76;
+    color: rgba($text-primary, 0.62);
   }
 
   &__entry-row {
@@ -53,9 +66,9 @@
 
   &__section-title {
     @include type-label;
-    font-size: 0.62rem;
+    font-size: 0.72rem;
     color: $accent;
-    margin-bottom: 2rem;
+    margin-bottom: 2.2rem;
   }
 
   &__entry {
@@ -140,8 +153,8 @@
   }
 
   &__entry-company {
-    font-size: 0.94rem;
-    font-weight: $weight-light;
+    font-size: clamp(0.98rem, 1.05vw, 1.08rem);
+    font-weight: $weight-regular;
     color: $text-primary;
     line-height: 1.45;
     transition: color $transition-fast;
@@ -163,17 +176,23 @@
 
   &__entry-role {
     font-size: $type-small;
-    letter-spacing: $tracking-wide;
-    color: $text-secondary;
-    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: rgba($text-primary, 0.58);
     font-weight: $weight-light;
     transition: color $transition-fast;
+
+    &--place {
+      line-height: 1.65;
+      letter-spacing: 0;
+      text-transform: none;
+    }
   }
 
   &__entry-desc {
-    font-size: 0.9rem;
-    line-height: 1.72;
-    color: rgba($text-primary, 0.65);
+    max-width: 46rem;
+    font-size: 0.95rem;
+    line-height: 1.74;
+    color: rgba($text-primary, 0.68);
     font-weight: $weight-light;
   }
 
@@ -194,7 +213,7 @@
     letter-spacing: 0.02em;
   }
 
-  &__bottom {
+  &__practice {
     display: grid;
     grid-template-columns: 1fr 340px;
     gap: 0 5rem;
