@@ -15,7 +15,9 @@
   border-bottom: 1px solid $border;
   background: rgba($bg, 0.85);
   backdrop-filter: blur(12px);
-  transition: background $transition-normal, border-color $transition-normal;
+  transition:
+    background $transition-normal,
+    border-color $transition-normal;
 
   &--home {
     background: transparent;
@@ -27,9 +29,11 @@
   }
 
   &__logo {
-    font-size: 1rem;
+    font-family: $font-display;
+    font-size: 1.08rem;
     font-weight: $weight-medium;
-    letter-spacing: 3px;
+    letter-spacing: 0.08em;
+    line-height: $leading-caption;
     color: $text-primary;
     text-decoration: none;
     transition: color $transition-fast;
@@ -51,10 +55,9 @@
   }
 
   &__link {
-    font-size: 0.75rem;
+    @include type-label;
+    font-size: 0.66rem;
     font-weight: $weight-light;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
     color: $text-secondary;
     text-decoration: none;
     transition: color $transition-fast;
@@ -69,7 +72,7 @@
 
     @include respond-to(mobile) {
       font-size: 0.65rem;
-      letter-spacing: 1.5px;
+      letter-spacing: 0.16em;
     }
   }
 }

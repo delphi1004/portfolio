@@ -10,9 +10,8 @@
 
   &__back {
     display: inline-block;
-    font-size: 0.7rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    @include type-label;
+    font-size: 0.64rem;
     color: $text-secondary;
     background: none;
     border: none;
@@ -29,18 +28,21 @@
 
   &__label {
     display: block;
-    font-size: clamp(1.2rem, 2.5vw, 2rem);
-    font-weight: $weight-thin;
-    letter-spacing: 2px;
+    font-family: $font-display;
+    font-size: $type-subhead;
+    font-weight: $weight-light;
+    line-height: $leading-title;
+    letter-spacing: -0.01em;
     color: $text-primary;
     margin-bottom: 0.6rem;
   }
 
   &__category-desc {
-    font-size: 0.85rem;
+    font-size: $type-small;
+    line-height: $leading-caption;
     color: $text-secondary;
     font-weight: $weight-light;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.02em;
   }
 
   &__projects {
@@ -59,9 +61,11 @@
   }
 
   &__project-title {
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-family: $font-display;
+    font-size: clamp(1.35rem, 2vw, 2rem);
     font-weight: $weight-light;
-    letter-spacing: 1px;
+    line-height: $leading-title;
+    letter-spacing: -0.01em;
     color: $text-primary;
     margin-bottom: 0.5rem;
   }
@@ -74,12 +78,13 @@
   }
 
   &__tag {
-    font-size: 0.68rem;
+    font-size: $type-caption;
+    line-height: $leading-caption;
     padding: 0.2rem 0.6rem;
     border: 1px solid $border;
     color: $text-secondary;
-    letter-spacing: 0.3px;
-    background: rgba(255, 255, 255, 0.03);
+    letter-spacing: 0.02em;
+    background: rgba($text-primary, 0.035);
   }
 
   &__project-body {
@@ -95,10 +100,8 @@
   }
 
   &__project-desc {
-    font-size: 0.9rem;
-    line-height: 1.85;
+    @include type-body;
     color: rgba($text-primary, 0.75);
-    font-weight: $weight-light;
   }
 
   &__main-media {
@@ -146,11 +149,13 @@
     flex-direction: column;
     gap: 0.5rem;
     padding: 1.1rem 1.3rem;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba($text-primary, 0.025);
     border: 1px solid $border;
     border-left: 2px solid transparent;
     text-decoration: none;
-    transition: border-color $transition-fast, background $transition-fast;
+    transition:
+      border-color $transition-fast,
+      background $transition-fast;
 
     &:hover {
       background: $bg-hover;
@@ -175,7 +180,8 @@
   }
 
   &__link-label {
-    font-size: 0.85rem;
+    font-size: $type-small;
+    line-height: $leading-caption;
     font-weight: $weight-light;
     color: rgba($text-primary, 0.85);
     transition: color $transition-fast;
@@ -185,14 +191,16 @@
     font-size: 0.8rem;
     color: $text-secondary;
     flex-shrink: 0;
-    transition: color $transition-fast, transform $transition-normal;
+    transition:
+      color $transition-fast,
+      transform $transition-normal;
   }
 
   &__link-stack {
-    font-size: 0.65rem;
+    font-size: $type-caption;
     color: $text-secondary;
-    letter-spacing: 0.2px;
-    line-height: 1.5;
+    letter-spacing: 0.02em;
+    line-height: $leading-caption;
   }
 
   &__video-wrapper {
@@ -213,17 +221,16 @@
 
   &__caption {
     margin-top: 0.5rem;
-    font-size: 0.72rem;
-    letter-spacing: 1px;
+    font-size: $type-caption;
+    line-height: $leading-caption;
+    letter-spacing: 0.08em;
     color: $text-secondary;
     font-style: italic;
   }
 
   &__text-block {
-    font-size: 0.88rem;
-    line-height: 1.8;
+    @include type-body;
     color: rgba($text-primary, 0.7);
-    font-weight: $weight-light;
     padding: 1.5rem;
     background: $bg-card;
     border-left: 2px solid $accent;

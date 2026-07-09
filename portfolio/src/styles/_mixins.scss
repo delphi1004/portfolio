@@ -2,11 +2,17 @@
 
 @mixin respond-to($bp) {
   @if $bp == mobile {
-    @media (max-width: $bp-mobile) { @content; }
+    @media (max-width: $bp-mobile) {
+      @content;
+    }
   } @else if $bp == tablet {
-    @media (max-width: $bp-tablet) { @content; }
+    @media (max-width: $bp-tablet) {
+      @content;
+    }
   } @else if $bp == desktop {
-    @media (min-width: $bp-desktop) { @content; }
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
   }
 }
 
@@ -14,6 +20,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin type-display {
+  font-family: $font-display;
+  font-size: $type-display;
+  font-weight: $weight-light;
+  line-height: $leading-tight;
+  letter-spacing: $tracking-tight;
+}
+
+@mixin type-title {
+  font-family: $font-display;
+  font-size: $type-title;
+  font-weight: $weight-light;
+  line-height: $leading-title;
+  letter-spacing: $tracking-tight;
+}
+
+@mixin type-heading {
+  font-family: $font-display;
+  font-size: $type-heading;
+  font-weight: $weight-light;
+  line-height: $leading-title;
+  letter-spacing: -0.02em;
+}
+
+@mixin type-label {
+  font-size: $type-caption;
+  font-weight: $weight-medium;
+  line-height: $leading-caption;
+  letter-spacing: $tracking-wider;
+  text-transform: uppercase;
+}
+
+@mixin type-body {
+  font-size: $type-body;
+  font-weight: $weight-light;
+  line-height: $leading-body;
+  letter-spacing: $tracking-normal;
 }
 
 @mixin page-padding {

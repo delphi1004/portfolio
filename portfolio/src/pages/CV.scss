@@ -11,25 +11,18 @@
 
   &__label {
     display: block;
-    font-size: 0.7rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+    @include type-label;
     color: $accent;
     margin-bottom: 1rem;
   }
 
   &__name {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: $weight-thin;
-    letter-spacing: -1px;
-    line-height: 1;
+    @include type-title;
     margin-bottom: 0.6rem;
   }
 
   &__role {
-    font-size: 0.8rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    @include type-label;
     color: $text-secondary;
   }
 
@@ -41,13 +34,15 @@
   }
 
   &__entry-link {
-    font-size: 0.7rem;
-    letter-spacing: 1px;
+    font-size: $type-caption;
+    letter-spacing: $tracking-wide;
     color: $text-secondary;
     text-decoration: none;
     transition: color $transition-fast;
 
-    &:hover { color: $accent; }
+    &:hover {
+      color: $accent;
+    }
   }
 
   &__section {
@@ -57,11 +52,9 @@
   }
 
   &__section-title {
+    @include type-label;
     font-size: 0.62rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
     color: $accent;
-    font-weight: $weight-regular;
     margin-bottom: 2rem;
   }
 
@@ -73,7 +66,9 @@
     border-bottom: 1px solid $border;
     text-decoration: none;
 
-    &:last-child { border-bottom: none; }
+    &:last-child {
+      border-bottom: none;
+    }
 
     &--stacked {
       display: flex;
@@ -101,13 +96,20 @@
         background: $border;
       }
 
-      &:last-child::after { display: none; }
+      &:last-child::after {
+        display: none;
+      }
 
       &:hover {
         .cv__entry-company,
         .cv__entry-meta,
-        .cv__entry-role { color: $accent; }
-        .cv__entry-arrow { color: $accent; transform: translate(2px, -2px); }
+        .cv__entry-role {
+          color: $accent;
+        }
+        .cv__entry-arrow {
+          color: $accent;
+          transform: translate(2px, -2px);
+        }
       }
     }
 
@@ -124,7 +126,9 @@
   &__entry-arrow {
     font-size: 0.9rem;
     color: $text-secondary;
-    transition: color $transition-fast, transform $transition-normal;
+    transition:
+      color $transition-fast,
+      transform $transition-normal;
     align-self: center;
   }
 
@@ -136,18 +140,18 @@
   }
 
   &__entry-company {
-    font-size: 0.9rem;
+    font-size: 0.94rem;
     font-weight: $weight-light;
     color: $text-primary;
-    line-height: 1.4;
+    line-height: 1.45;
     transition: color $transition-fast;
   }
 
   &__entry-meta {
-    font-size: 0.7rem;
+    font-size: $type-caption;
     color: $text-secondary;
-    letter-spacing: 0.3px;
-    line-height: 1.5;
+    letter-spacing: 0.02em;
+    line-height: $leading-caption;
     transition: color $transition-fast;
   }
 
@@ -158,8 +162,8 @@
   }
 
   &__entry-role {
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+    font-size: $type-small;
+    letter-spacing: $tracking-wide;
     color: $text-secondary;
     text-transform: uppercase;
     font-weight: $weight-light;
@@ -167,8 +171,8 @@
   }
 
   &__entry-desc {
-    font-size: 0.85rem;
-    line-height: 1.75;
+    font-size: 0.9rem;
+    line-height: 1.72;
     color: rgba($text-primary, 0.65);
     font-weight: $weight-light;
   }
@@ -181,12 +185,13 @@
   }
 
   &__tag {
-    font-size: 0.65rem;
+    font-size: $type-caption;
+    line-height: $leading-caption;
     padding: 0.2rem 0.55rem;
     border: 1px solid $border;
     color: $text-secondary;
-    background: rgba(255, 255, 255, 0.03);
-    letter-spacing: 0.3px;
+    background: rgba($text-primary, 0.035);
+    letter-spacing: 0.02em;
   }
 
   &__bottom {

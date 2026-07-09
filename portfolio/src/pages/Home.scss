@@ -26,20 +26,14 @@
   }
 
   &__name {
-    font-size: clamp(3rem, 7vw, 6rem);
-    font-weight: $weight-thin;
-    letter-spacing: -1px;
-    line-height: 1;
+    @include type-display;
     color: $text-primary;
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
   }
 
   &__role {
-    font-size: clamp(0.8rem, 1.2vw, 1rem);
-    font-weight: $weight-light;
+    @include type-label;
     color: $text-secondary;
-    letter-spacing: 2px;
-    text-transform: uppercase;
   }
 
   &__nav {
@@ -55,12 +49,16 @@
 
   &__nav-link {
     display: block;
-    font-size: clamp(1.4rem, 2.5vw, 2.2rem);
-    font-weight: $weight-thin;
-    letter-spacing: 3px;
+    font-family: $font-display;
+    font-size: $type-subhead;
+    font-weight: $weight-light;
+    line-height: $leading-title;
+    letter-spacing: 0.03em;
     color: $text-secondary;
     text-decoration: none;
-    transition: color $transition-fast, letter-spacing $transition-normal;
+    transition:
+      color $transition-fast,
+      letter-spacing $transition-normal;
     position: relative;
 
     &::after {
@@ -81,7 +79,7 @@
 
     &:hover {
       color: $text-primary;
-      letter-spacing: 5px;
+      letter-spacing: 0.08em;
 
       &::after {
         width: 100%;
@@ -93,9 +91,7 @@
     position: absolute;
     bottom: 2.5rem;
     left: clamp(20px, 5%, 60px);
-    font-size: 0.7rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: $border;
+    @include type-label;
+    color: rgba($text-primary, 0.32);
   }
 }

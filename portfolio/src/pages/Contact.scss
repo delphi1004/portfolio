@@ -10,25 +10,18 @@
 
   &__label {
     display: block;
-    font-size: 0.7rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+    @include type-label;
     color: $accent;
     margin-bottom: 1.5rem;
   }
 
   &__name {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: $weight-thin;
-    letter-spacing: -1px;
-    line-height: 1;
+    @include type-title;
     margin-bottom: 0.8rem;
   }
 
   &__role {
-    font-size: 0.85rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    @include type-label;
     color: $text-secondary;
   }
 
@@ -61,15 +54,15 @@
   }
 
   &__item-label {
-    font-size: 0.7rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    @include type-label;
+    font-size: 0.64rem;
     color: $text-secondary;
     min-width: 100px;
   }
 
   &__item-link {
-    font-size: 0.95rem;
+    font-size: $type-body;
+    line-height: $leading-caption;
     font-weight: $weight-light;
     color: $text-primary;
     text-decoration: none;

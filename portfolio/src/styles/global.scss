@@ -15,8 +15,12 @@ html {
 body {
   font-family: $font;
   font-weight: $weight-light;
+  line-height: $leading-body;
   background-color: $bg;
   color: $text-primary;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-feature-settings: 'kern', 'liga', 'clig';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
