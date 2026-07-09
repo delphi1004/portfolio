@@ -74,7 +74,7 @@ const generativeArt: WorkDescription = {
         'Supervisor: Matti Niinimäki (Aalto University)  —  Advisor: Nuno Correia (University of Greenwich)  —  Tool: Processing',
       main_image: null,
       description:
-        'Music and visual art are integral to our daily lives, influencing our emotions through their sensory experiences. This thesis explores the connection between music and generative art, specifically converting music into visual artwork through a colour theme linked to musical emotion. The project is based on an emotional model of arousal and valence and demonstrates how colour impacts our emotions. The thesis details the process of retrieving musical information, including arousal and valence, and demonstrates the implementation of software that integrates musical emotion and characteristics like frequency analysis. The result is a generative artwork that can be applied to various daily life products.',
+        'This thesis explores how music can be translated into generative visual artwork through emotion, colour, and frequency analysis. Using arousal and valence as a model, the system turns musical characteristics into visual compositions that can move between screen-based art and everyday objects.',
       resources: [
         { image: master01 },
         { image: master03 },

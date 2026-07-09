@@ -5,16 +5,16 @@ const softwareDevelopment: WorkDescription = {
   category: {
     name: '[ software development ]',
     description:
-      'To me, software architecture design is just like designing a city — planning and organizing various components and structures to create a functional and scalable system.',
+      'I design and build digital systems where interface, structure, and interaction work as one continuous experience.',
   },
   project: [
     {
-      title: '[ FRONTEND DEVELOPMENT ]',
+      title: '[ INTERFACE SYSTEMS ]',
       containerColumn: '100%',
       tools:
-        'React · Next.js · Gatsby · TypeScript · Sass · styled-components · Tailwind · Storybook · Jest · Cypress · Magnolia · Contentful · Sanity.io · WordPress',
+        'React · Next.js · TypeScript · Sass · Storybook · Testing · CMS',
       description:
-        'I have developed a deep understanding of frontend technologies, including HTML, CSS, JavaScript, TypeScript and React. I am passionate about designing and implementing interactive websites that captivate users and encourage them to engage with the content actively.',
+        'I develop content-driven web platforms and interactive interfaces, combining frontend architecture with careful visual systems and maintainable implementation.',
       resources: [
         {
           url: 'https://www.workinfinland.com/en/',

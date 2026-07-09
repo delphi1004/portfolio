@@ -33,6 +33,8 @@
 
   &__role {
     @include type-label;
+    font-size: clamp(0.72rem, 0.82vw, 0.82rem);
+    letter-spacing: 0.16em;
     color: $text-secondary;
   }
 
@@ -53,7 +55,7 @@
     font-size: $type-subhead;
     font-weight: $weight-light;
     line-height: $leading-title;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.01em;
     color: $text-secondary;
     text-decoration: none;
     transition:
@@ -79,7 +81,7 @@
 
     &:hover {
       color: $text-primary;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.04em;
 
       &::after {
         width: 100%;
@@ -92,6 +94,7 @@
     bottom: 2.5rem;
     left: clamp(20px, 5%, 60px);
     @include type-label;
-    color: rgba($text-primary, 0.32);
+    letter-spacing: 0.16em;
+    color: rgba($text-primary, 0.4);
   }
 }
