@@ -6,8 +6,8 @@ import './Contact.scss'
 const contacts = [
   {
     label: 'Email',
-    value: 'john@adventureclub.io',
-    href: 'mailto:john@adventureclub.io',
+    value: 'cj9studio@gmail.com',
+    href: 'mailto:cj9studio@gmail.com',
   },
   {
     label: 'LinkedIn',
@@ -27,21 +27,21 @@ const contacts = [
 ]
 
 const Contact = () => (
-    <AnimatedPage>
-      <div className="contact">
-        <Block>
-        <div className="contact__header">
-          <span className="contact__label">/ contact</span>
-          <h1 className="contact__name">John Lee</h1>
-          <p className="contact__role">Software Developer · Media Artist</p>
-          <p className="contact__intro">
+  <AnimatedPage>
+    <div className='contact'>
+      <Block>
+        <div className='contact__header'>
+          <span className='contact__label'>/ contact</span>
+          <h1 className='contact__name'>John Lee</h1>
+          <p className='contact__role'>Software Developer · Media Artist</p>
+          <p className='contact__intro'>
             Available for software, interactive media, and exhibition projects.
           </p>
         </div>
 
-        <div className="contact__divider" />
+        <div className='contact__divider' />
 
-        <ul className="contact__list">
+        <ul className='contact__list'>
           {contacts.map(({ label, value, href }, i) => (
             <motion.li
               key={label}
@@ -50,22 +50,24 @@ const Contact = () => (
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.08 + 0.3, duration: 0.4 }}
             >
-              <span className="contact__item-label">{label}</span>
+              <span className='contact__item-label'>{label}</span>
               <a
                 href={href}
                 target={href.startsWith('mailto') ? undefined : '_blank'}
-                rel="noopener noreferrer"
-                className="contact__item-link"
+                rel='noopener noreferrer'
+                className='contact__item-link'
               >
                 {value}
-                <span className="contact__item-arrow" aria-hidden="true">↗</span>
+                <span className='contact__item-arrow' aria-hidden='true'>
+                  ↗
+                </span>
               </a>
             </motion.li>
           ))}
         </ul>
-        </Block>
-      </div>
-    </AnimatedPage>
+      </Block>
+    </div>
+  </AnimatedPage>
 )
 
 export default Contact

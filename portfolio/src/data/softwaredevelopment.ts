@@ -5,7 +5,6 @@ import ruukki3dPreview from '../resources/ruukki_01.png'
 import ruukkiProfileEditor from '../resources/ruukki_02.png'
 import ruukkiOrderView from '../resources/ruukki_03.png'
 
-
 const softwareDevelopment: WorkDescription = {
   category: {
     name: '[ software development ]',
@@ -16,8 +15,7 @@ const softwareDevelopment: WorkDescription = {
     {
       title: '[ WEB INTERFACE SYSTEMS ]',
       containerColumn: '100%',
-      tools:
-        'React · Next.js · TypeScript · Sass · Storybook · Testing · CMS',
+      tools: 'React · Next.js · TypeScript · Sass · Storybook · Testing · CMS',
       description:
         'I develop content-driven web platforms and interactive interfaces, combining frontend architecture with careful visual systems and maintainable implementation.',
       resources: [
@@ -56,8 +54,7 @@ const softwareDevelopment: WorkDescription = {
     {
       title: '[ VR APPLICATION ]',
       containerColumn: '100%',
-      tools:
-        'VR · Rehabilitation · Interaction Design · Gamified Training',
+      tools: 'VR · Rehabilitation · Interaction Design · Gamified Training',
       description:
         'Nuanua is a VR therapy game for Kostamokoti rehabilitation center, designed to help residents practice everyday routines, communication, emotional regulation, and decision-making in a safe simulated environment.',
       main_image: {

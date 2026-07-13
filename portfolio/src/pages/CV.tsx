@@ -8,7 +8,8 @@ const experience = [
     role: 'Senior Frontend Developer',
     location: 'Helsinki Metropolitan Area · Hybrid',
     period: 'Sep 2023 – Present',
-    description: 'Build content-driven websites and interface systems with React, Next.js, Sanity.io, and Storybook.',
+    description:
+      'Build content-driven websites and interface systems with React, Next.js, Sanity.io, and Storybook.',
     tools: ['React', 'Next.js', 'TypeScript', 'Storybook', 'Sanity.io'],
   },
   {
@@ -16,7 +17,8 @@ const experience = [
     role: 'Data Visualisation Engineer',
     location: 'Helsinki, Uusimaa, Finland · Hybrid',
     period: 'Jan 2023 – Aug 2023',
-    description: 'Built data visualisation tools and interactive interfaces for music data products.',
+    description:
+      'Built data visualisation tools and interactive interfaces for music data products.',
     tools: ['D3.js', 'React', 'TypeScript'],
   },
   {
@@ -24,7 +26,8 @@ const experience = [
     role: 'Senior Front-end Analyst',
     location: 'Helsinki, Uusimaa, Finland',
     period: 'May 2021 – Nov 2022',
-    description: 'Built content-driven websites and interface systems with React, Sanity.io, TypeScript, and Storybook.',
+    description:
+      'Built content-driven websites and interface systems with React, Sanity.io, TypeScript, and Storybook.',
     tools: ['React', 'Sanity.io', 'TypeScript', 'Storybook'],
   },
   {
@@ -32,7 +35,8 @@ const experience = [
     role: 'Senior Software Engineer',
     location: 'Finland',
     period: 'Oct 2019 – Aug 2020',
-    description: 'Developed lab automation software for scientific instruments and production workflows.',
+    description:
+      'Developed lab automation software for scientific instruments and production workflows.',
     tools: ['C++', 'C#'],
   },
   {
@@ -40,7 +44,8 @@ const experience = [
     role: 'Software Architect',
     location: 'South Korea',
     period: 'Apr 2010 – Feb 2016',
-    description: 'Designed software architecture and built mobile applications across client and product projects.',
+    description:
+      'Designed software architecture and built mobile applications across client and product projects.',
     tools: ['Objective-C', 'iOS'],
   },
   {
@@ -48,7 +53,8 @@ const experience = [
     role: 'Senior Software Developer',
     location: 'South Korea, Canada',
     period: 'Sep 2006 – Mar 2010',
-    description: 'Implemented fault detection and classification systems for semiconductor manufacturing environments.',
+    description:
+      'Implemented fault detection and classification systems for semiconductor manufacturing environments.',
     tools: ['C#', 'Pro*C'],
   },
   {
@@ -158,106 +164,121 @@ const teaching = [
 
 const CV = () => (
   <AnimatedPage>
-    <div className="cv">
+    <div className='cv'>
       <Block>
-        <div className="cv__header">
-          <span className="cv__label">/ cv</span>
-          <h1 className="cv__name">John Lee</h1>
-          <p className="cv__role">Software Developer · New Media Artist</p>
-          <p className="cv__intro">
+        <div className='cv__header'>
+          <span className='cv__label'>/ cv</span>
+          <h1 className='cv__name'>John Lee</h1>
+          <p className='cv__role'>Software Developer · New Media Artist</p>
+          <p className='cv__intro'>
             I build software systems, content-driven interfaces, and interactive experiences,
-            connecting long-term engineering practice with computational art and public installations.
+            connecting long-term engineering practice with computational art and public
+            installations.
           </p>
         </div>
 
-        <section className="cv__section">
-          <h2 className="cv__section-title">Experience</h2>
+        <section className='cv__section'>
+          <h2 className='cv__section-title'>Experience</h2>
           {experience.map(({ company, role, location, period, description, tools }) => (
-            <div key={company} className="cv__entry">
-              <div className="cv__entry-left">
-                <span className="cv__entry-company">{company}</span>
-                <span className="cv__entry-meta">{location} · {period}</span>
+            <div key={company} className='cv__entry'>
+              <div className='cv__entry-left'>
+                <span className='cv__entry-company'>{company}</span>
+                <span className='cv__entry-meta'>
+                  {location} · {period}
+                </span>
               </div>
-              <div className="cv__entry-right">
-                <span className="cv__entry-role">{role}</span>
-                <p className="cv__entry-desc">{description}</p>
-                <div className="cv__tags">
-                  {tools.map(t => <span key={t} className="cv__tag">{t}</span>)}
+              <div className='cv__entry-right'>
+                <span className='cv__entry-role'>{role}</span>
+                <p className='cv__entry-desc'>{description}</p>
+                <div className='cv__tags'>
+                  {tools.map((t) => (
+                    <span key={t} className='cv__tag'>
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
           ))}
         </section>
 
-        <section className="cv__section">
-          <h2 className="cv__section-title">Education</h2>
+        <section className='cv__section'>
+          <h2 className='cv__section-title'>Education</h2>
           {education.map(({ degree, institution, location, period }) => (
-            <div key={degree} className="cv__entry">
-              <div className="cv__entry-left">
-                <span className="cv__entry-company">{institution}</span>
-                <span className="cv__entry-meta">
+            <div key={degree} className='cv__entry'>
+              <div className='cv__entry-left'>
+                <span className='cv__entry-company'>{institution}</span>
+                <span className='cv__entry-meta'>
                   {[location, period].filter(Boolean).join(' · ')}
                 </span>
               </div>
-              <div className="cv__entry-right">
-                <span className="cv__entry-role">{degree}</span>
+              <div className='cv__entry-right'>
+                <span className='cv__entry-role'>{degree}</span>
               </div>
             </div>
           ))}
         </section>
 
-        <div className="cv__practice">
-          <section className="cv__section">
-            <h2 className="cv__section-title">Creative Practice</h2>
+        <div className='cv__practice'>
+          <section className='cv__section'>
+            <h2 className='cv__section-title'>Creative Practice</h2>
             {exhibitions.map(({ title, type, venue, period, url }) => (
               <a
                 key={title}
                 href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cv__entry cv__entry--link"
+                target='_blank'
+                rel='noopener noreferrer'
+                className='cv__entry cv__entry--link'
               >
-                <div className="cv__entry-left">
-                  <span className="cv__entry-company">{title}</span>
-                  <span className="cv__entry-meta">{type} · {period}</span>
+                <div className='cv__entry-left'>
+                  <span className='cv__entry-company'>{title}</span>
+                  <span className='cv__entry-meta'>
+                    {type} · {period}
+                  </span>
                 </div>
-                <div className="cv__entry-right">
-                  <span className="cv__entry-role cv__entry-role--place">{venue}</span>
+                <div className='cv__entry-right'>
+                  <span className='cv__entry-role cv__entry-role--place'>{venue}</span>
                 </div>
-                <span className="cv__entry-arrow">↗</span>
+                <span className='cv__entry-arrow'>↗</span>
               </a>
             ))}
           </section>
 
-          <div className="cv__aside">
-            <section className="cv__section">
-              <h2 className="cv__section-title">Publications</h2>
+          <div className='cv__aside'>
+            <section className='cv__section'>
+              <h2 className='cv__section-title'>Publications</h2>
               {publications.map(({ title, publisher, date, url }) => (
-                <div key={title} className="cv__entry cv__entry--stacked">
+                <div key={title} className='cv__entry cv__entry--stacked'>
                   {url ? (
-                    <a href={url} target="_blank" rel="noopener noreferrer" className="cv__entry-link">
+                    <a
+                      href={url}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='cv__entry-link'
+                    >
                       {title} ↗
                     </a>
                   ) : (
-                    <span className="cv__entry-company">{title}</span>
+                    <span className='cv__entry-company'>{title}</span>
                   )}
-                  <span className="cv__entry-meta">{publisher} · {date}</span>
+                  <span className='cv__entry-meta'>
+                    {publisher} · {date}
+                  </span>
                 </div>
               ))}
             </section>
 
-            <section className="cv__section">
-              <h2 className="cv__section-title">Teaching at Aalto University</h2>
+            <section className='cv__section'>
+              <h2 className='cv__section-title'>Teaching at Aalto University</h2>
               {teaching.map(({ course, period }) => (
-                <div key={course} className="cv__entry cv__entry--stacked">
-                  <span className="cv__entry-company">{course}</span>
-                  <span className="cv__entry-meta">{period}</span>
+                <div key={course} className='cv__entry cv__entry--stacked'>
+                  <span className='cv__entry-company'>{course}</span>
+                  <span className='cv__entry-meta'>{period}</span>
                 </div>
               ))}
             </section>
           </div>
         </div>
-
       </Block>
     </div>
   </AnimatedPage>
