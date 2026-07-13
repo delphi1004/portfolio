@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>이청운 CV Korean</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      :root {
+        --paper: #fbfaf7;
+        --ink: #171717;
+        --muted: #69645b;
+        --soft: #928a7c;
+        --line: rgba(23, 23, 23, 0.14);
+        --accent: #d98c00;
+        --accent-soft: #f2e3c7;
+        --panel: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: #dedbd2;
+        color: var(--ink);
+        font-family:
+          'Apple SD Gothic Neo', 'Noto Sans KR', 'IBM Plex Sans', 'Aptos', 'Helvetica Neue', Arial,
+          sans-serif;
+        font-size: 10pt;
+        line-height: 1.5;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        padding: 24px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto 24px;
+        padding: 13mm 15mm 12mm;
+        background:
+          radial-gradient(circle at 92% 8%, rgba(217, 140, 0, 0.12), transparent 26%),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(251, 250, 247, 0.98));
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page::before {
+        content: '';
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 5mm;
+        background: var(--ink);
+      }
+
+      .page--second {
+        background:
+          radial-gradient(circle at 8% 8%, rgba(217, 140, 0, 0.1), transparent 24%),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(251, 250, 247, 0.98));
+      }
+
+      .page-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding-bottom: 7mm;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .page-title {
+        margin-top: 4mm;
+        font-size: 22pt;
+        line-height: 1.08;
+        letter-spacing: 0;
+        font-weight: 560;
+      }
+
+      .header {
+        display: grid;
+        grid-template-columns: 1fr 56mm;
+        gap: 10mm;
+        padding-bottom: 7mm;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .eyebrow,
+      .section-title,
+      .meta-label,
+      .page-mark {
+        font-size: 7.4pt;
+        font-weight: 650;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow,
+      .section-title {
+        color: var(--accent);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        margin-top: 4mm;
+        font-size: 36pt;
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+        font-weight: 520;
+      }
+
+      .role {
+        margin-top: 3.5mm;
+        font-size: 11.2pt;
+        color: var(--muted);
+        font-weight: 400;
+      }
+
+      .summary {
+        margin-top: 5.5mm;
+        max-width: 122mm;
+        font-size: 10.2pt;
+        color: #34312d;
+      }
+
+      .contact-card {
+        align-self: start;
+        padding: 5mm;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.68);
+      }
+
+      .contact-card a,
+      .contact-card span {
+        display: block;
+        margin-top: 2mm;
+        font-size: 8.2pt;
+        color: var(--muted);
+      }
+
+      .meta-label {
+        margin-top: 0;
+        color: var(--ink);
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr 53mm;
+        gap: 10mm;
+        margin-top: 7mm;
+      }
+
+      .section + .section {
+        margin-top: 6mm;
+      }
+
+      .section-title {
+        margin-bottom: 4mm;
+        padding-bottom: 2mm;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .item {
+        padding: 3.5mm 0;
+        border-bottom: 1px solid var(--line);
+        break-inside: avoid;
+      }
+
+      .item:first-of-type {
+        padding-top: 0;
+      }
+
+      .item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .item-head {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 4mm;
+        align-items: baseline;
+      }
+
+      .company,
+      .degree,
+      .project-name {
+        font-size: 10.6pt;
+        line-height: 1.25;
+        font-weight: 620;
+      }
+
+      .period {
+        font-size: 7.8pt;
+        color: var(--soft);
+        white-space: nowrap;
+      }
+
+      .position {
+        margin-top: 1mm;
+        color: var(--muted);
+        font-size: 8.4pt;
+        font-weight: 520;
+      }
+
+      .description {
+        margin-top: 2.2mm;
+        color: #34312d;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5mm;
+        margin-top: 2.8mm;
+      }
+
+      .tag {
+        padding: 1mm 2.2mm;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.72);
+        color: var(--muted);
+        font-size: 7.4pt;
+        line-height: 1.2;
+      }
+
+      .aside-block {
+        padding: 4mm;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.58);
+        break-inside: avoid;
+      }
+
+      .aside-block + .aside-block {
+        margin-top: 5mm;
+      }
+
+      .skill-list,
+      .compact-list {
+        display: grid;
+        gap: 2mm;
+      }
+
+      .skill-group strong,
+      .compact-item strong {
+        display: block;
+        font-size: 8.3pt;
+        margin-bottom: 0.8mm;
+      }
+
+      .skill-group span,
+      .compact-item span {
+        display: block;
+        color: var(--muted);
+        font-size: 7.9pt;
+        line-height: 1.42;
+      }
+
+      .compact-item a,
+      .project-name a {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 1mm;
+      }
+
+      .compact-item a::after,
+      .project-name a::after {
+        content: '↗';
+        color: var(--accent);
+        font-size: 7pt;
+        line-height: 1;
+      }
+
+      .highlight {
+        display: grid;
+        grid-template-columns: 20mm 1fr;
+        gap: 4mm;
+        padding: 3.2mm 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .highlight:last-child {
+        border-bottom: none;
+      }
+
+      .highlight-mark {
+        color: var(--accent);
+        font-size: 8pt;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+      }
+
+      .footer {
+        position: absolute;
+        left: 16mm;
+        right: 16mm;
+        bottom: 8mm;
+        display: flex;
+        justify-content: space-between;
+        color: var(--soft);
+        font-size: 7.4pt;
+      }
+
+      .footer a {
+        color: inherit;
+      }
+
+      .page-mark {
+        color: var(--soft);
+      }
+
+      @media print {
+        body {
+          padding: 0;
+          background: var(--paper);
+        }
+
+        .page {
+          width: 210mm;
+          height: 297mm;
+          min-height: 297mm;
+          margin: 0;
+          box-shadow: none;
+          break-after: page;
+        }
+
+        .page:last-child {
+          break-after: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <div>
+          <div class="eyebrow">Curriculum Vitae / Korean / 2026</div>
+          <h1>이청운</h1>
+          <p class="role">
+            Senior Frontend Developer &middot; Software Developer &middot; New Media Artist
+          </p>
+          <p class="summary">
+            interface, structure, interaction이 하나의 경험으로 작동하는 digital systems를 설계하고
+            구현합니다. 장기적인 software engineering 경험을 바탕으로 content-driven platforms, data
+            visualisation, VR applications, computational art, public interactive installations를
+            연결해 왔습니다.
+          </p>
+        </div>
+        <aside class="contact-card">
+          <div class="meta-label">Contact</div>
+          <a href="mailto:cj9studio@gmail.com">cj9studio@gmail.com</a>
+          <a href="https://www.linkedin.com/in/delphi1004/">linkedin.com/in/delphi1004</a>
+          <a href="https://github.com/delphi1004">github.com/delphi1004</a>
+          <span>Helsinki Metropolitan Area</span>
+        </aside>
+      </header>
+
+      <div class="layout">
+        <div>
+          <section class="section">
+            <h2 class="section-title">Recent Experience / 최근 경력</h2>
+
+            <article class="item">
+              <div class="item-head">
+                <h3 class="company">Adventure Club</h3>
+                <span class="period">Sep 2023 &ndash; Present</span>
+              </div>
+              <p class="position">Senior Frontend Developer / Helsinki Metropolitan Area, Hybrid</p>
+              <p class="description">
+                client 및 product work에서 content-driven websites, interface systems,
+                backend-connected applications, immersive VR experiences를 구축합니다.
+              </p>
+              <div class="tags">
+                <span class="tag">React</span><span class="tag">Next.js</span
+                ><span class="tag">TypeScript</span><span class="tag">Storybook</span
+                ><span class="tag">Sanity.io</span><span class="tag">Node.js</span
+                ><span class="tag">VR</span>
+              </div>
+            </article>
+
+            <article class="item">
+              <div class="item-head">
+                <h3 class="company">Utopia Music</h3>
+                <span class="period">Jan 2023 &ndash; Aug 2023</span>
+              </div>
+              <p class="position">Data Visualisation Engineer / Helsinki, Hybrid</p>
+              <p class="description">
+                music data products를 위한 data visualisation tools와 interactive interfaces를
+                개발했습니다. React application work와 D3-based visual systems를 함께 다뤘습니다.
+              </p>
+              <div class="tags">
+                <span class="tag">D3.js</span><span class="tag">React</span
+                ><span class="tag">TypeScript</span><span class="tag">Data Visualisation</span>
+              </div>
+            </article>
+
+            <article class="item">
+              <div class="item-head">
+                <h3 class="company">Accenture Song</h3>
+                <span class="period">May 2021 &ndash; Nov 2022</span>
+              </div>
+              <p class="position">Senior Front-end Analyst / Helsinki</p>
+              <p class="description">
+                modern frontend architecture, CMS workflows, testing, reusable component
+                documentation을 기반으로 content-driven websites와 interface systems를 구축했습니다.
+              </p>
+              <div class="tags">
+                <span class="tag">React</span><span class="tag">Sanity.io</span
+                ><span class="tag">TypeScript</span><span class="tag">Storybook</span
+                ><span class="tag">Testing</span>
+              </div>
+            </article>
+          </section>
+        </div>
+
+        <aside>
+          <section class="aside-block">
+            <h2 class="section-title">Core Skills / 핵심 역량</h2>
+            <div class="skill-list">
+              <div class="skill-group">
+                <strong>Frontend Systems</strong
+                ><span>React, Next.js, TypeScript, Storybook, Sass, testing, CMS integration</span>
+              </div>
+              <div class="skill-group">
+                <strong>Data & Interaction</strong
+                ><span
+                  >D3.js, data visualisation, UI architecture, interactive tools, product
+                  workflows</span
+                >
+              </div>
+              <div class="skill-group">
+                <strong>Creative Technology</strong
+                ><span
+                  >Unity 3D, Unreal Engine, Processing, openFrameworks, OpenCV, physical
+                  computing</span
+                >
+              </div>
+              <div class="skill-group">
+                <strong>Software Engineering</strong
+                ><span>C, C++, C#, Objective-C, system architecture, automation software</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="aside-block">
+            <h2 class="section-title">Education / 학력</h2>
+            <div class="compact-list">
+              <div class="compact-item">
+                <strong>MA / New Media Design and Production</strong
+                ><span>Aalto University, Finland / 2017 &ndash; 2020</span>
+              </div>
+              <div class="compact-item">
+                <strong>M.Eng / Convergence Content Production</strong
+                ><span>Dongguk University, South Korea / 2014 &ndash; 2016</span>
+              </div>
+              <div class="compact-item">
+                <strong>B.Eng / Computer and Information Science</strong
+                ><span>Korea Digital University, South Korea / 2002 &ndash; 2007</span>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+
+      <div class="footer">
+        <span
+          ><a href="mailto:cj9studio@gmail.com">cj9studio@gmail.com</a> /
+          <a href="https://www.linkedin.com/in/delphi1004/">linkedin.com/in/delphi1004</a></span
+        ><span class="page-mark">01</span>
+      </div>
+    </main>
+
+    <section class="page page--second">
+      <header class="page-head">
+        <div>
+          <div class="eyebrow">Selected Background</div>
+          <h2 class="page-title">Engineering, Research & Creative Practice</h2>
+        </div>
+        <div class="page-mark">이청운 / CV Korean</div>
+      </header>
+
+      <div class="layout">
+        <div>
+          <section class="section">
+            <h2 class="section-title">Engineering Background / 엔지니어링 배경</h2>
+            <article class="highlight">
+              <div class="highlight-mark">2019<br />2020</div>
+              <div>
+                <h3 class="project-name">Lab Automation Software</h3>
+                <p class="description">
+                  Thermo Fisher Scientific에서 scientific instruments와 production workflows를 위한
+                  senior software engineering 업무를 수행했습니다.
+                </p>
+              </div>
+            </article>
+            <article class="highlight">
+              <div class="highlight-mark">2010<br />2016</div>
+              <div>
+                <h3 class="project-name">Mobile Application Architecture</h3>
+                <p class="description">
+                  다양한 client 및 product projects에서 iOS applications의 software architecture와
+                  implementation을 담당했습니다.
+                </p>
+              </div>
+            </article>
+            <article class="highlight">
+              <div class="highlight-mark">1999<br />2010</div>
+              <div>
+                <h3 class="project-name">Semiconductor & Metrology Systems</h3>
+                <p class="description">
+                  South Korea, Canada, Japan에서 fault detection and classification systems, wafer
+                  metrology software, automated microscopy systems, SECS/GEM protocol 업무를
+                  수행했습니다.
+                </p>
+              </div>
+            </article>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Publications / 논문</h2>
+            <article class="highlight">
+              <div class="highlight-mark">2017</div>
+              <div>
+                <h3 class="project-name">
+                  <a href="https://www.mdpi.com/2073-8994/9/12/316"
+                    >Tangible Visualization Table for Intuitive Data Display</a
+                  >
+                </h3>
+                <p class="description">Symmetry MDPI</p>
+              </div>
+            </article>
+            <article class="highlight">
+              <div class="highlight-mark">2016</div>
+              <div>
+                <h3 class="project-name">
+                  <a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002142333"
+                    >Hand Tracking Based Projection Mapping System and Applications</a
+                  >
+                </h3>
+                <p class="description">J. of KCGS</p>
+              </div>
+            </article>
+          </section>
+        </div>
+
+        <aside>
+          <section class="aside-block">
+            <h2 class="section-title">Creative Practice / 전시</h2>
+            <div class="compact-list">
+              <div class="compact-item">
+                <strong
+                  ><a href="https://www.youtube.com/watch?v=FRKkWGA_G0s"
+                    >Helsinki Children's Hospital Installation</a
+                  ></strong
+                ><span>Group installation / Helsinki, Finland / 2018 &ndash; Present</span>
+              </div>
+              <div class="compact-item">
+                <strong
+                  ><a href="https://www.youtube.com/watch?v=2yZoM1qjo9o"
+                    >When Light Echoes</a
+                  ></strong
+                ><span>Group interactive installation / Seoul, South Korea / 2019</span>
+              </div>
+              <div class="compact-item">
+                <strong
+                  ><a href="https://www.youtube.com/watch?v=3yvqrAyYy-4"
+                    >Seeing Sound, Listening to Image</a
+                  ></strong
+                ><span>Solo exhibition / Vare Gallery V1, Aalto University / 2019</span>
+              </div>
+              <div class="compact-item">
+                <strong
+                  ><a href="https://www.youtube.com/watch?v=mVPDrrjWDYY">Drawing Machine</a></strong
+                ><span>Solo exhibition / IDAS Hong-Ik University, Seoul / 2017</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="aside-block">
+            <h2 class="section-title">Teaching / 강의</h2>
+            <div class="compact-list">
+              <div class="compact-item">
+                <strong>Creative Coding</strong><span>Aalto University / Sep &ndash; Oct 2021</span>
+              </div>
+              <div class="compact-item">
+                <strong>Coding Clinic</strong><span>Aalto University / Oct &ndash; Dec 2019</span>
+              </div>
+              <div class="compact-item">
+                <strong>Internet Technologies and Techniques</strong
+                ><span>Aalto University / Nov &ndash; Dec 2019</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="aside-block">
+            <h2 class="section-title">Profile / 프로필</h2>
+            <div class="compact-list">
+              <div class="compact-item">
+                <strong>Focus</strong
+                ><span
+                  >Interface systems, data visualisation, VR applications, computational art, public
+                  installations</span
+                >
+              </div>
+              <div class="compact-item">
+                <strong>Working Mode</strong
+                ><span
+                  >Senior hands-on developer로서 architecture sense, visual judgement, prototyping
+                  fluency, long-term implementation depth를 함께 갖추고 일합니다.</span
+                >
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+
+      <div class="footer">
+        <span
+          ><a href="mailto:cj9studio@gmail.com">cj9studio@gmail.com</a> /
+          <a href="https://www.linkedin.com/in/delphi1004/">linkedin.com/in/delphi1004</a></span
+        ><span class="page-mark">02</span>
+      </div>
+    </section>
+  </body>
+</html>
