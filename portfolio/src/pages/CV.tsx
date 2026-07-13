@@ -4,12 +4,28 @@ import './CV.scss'
 
 const experience = [
   {
+    company: 'Adventure Club',
+    role: 'Senior Frontend Developer',
+    location: 'Helsinki Metropolitan Area · Hybrid',
+    period: 'Sep 2023 – Present',
+    description: 'Build content-driven websites and interface systems with React, Next.js, Sanity.io, and Storybook.',
+    tools: ['React', 'Next.js', 'TypeScript', 'Storybook', 'Sanity.io'],
+  },
+  {
+    company: 'Utopia Music',
+    role: 'Data Visualisation Engineer',
+    location: 'Helsinki, Uusimaa, Finland · Hybrid',
+    period: 'Jan 2023 – Aug 2023',
+    description: 'Built data visualisation tools and interactive interfaces for music data products.',
+    tools: ['D3.js', 'React', 'TypeScript'],
+  },
+  {
     company: 'Accenture Song',
-    role: 'Senior Front-end Developer',
-    location: 'Finland',
-    period: 'May 2021 – Present',
-    description: 'Build content-driven websites and interface systems with React, Next.js, Gatsby, and Storybook.',
-    tools: ['React', 'Next.js', 'TypeScript', 'Storybook'],
+    role: 'Senior Front-end Analyst',
+    location: 'Helsinki, Uusimaa, Finland',
+    period: 'May 2021 – Nov 2022',
+    description: 'Built content-driven websites and interface systems with React, Sanity.io, TypeScript, and Storybook.',
+    tools: ['React', 'Sanity.io', 'TypeScript', 'Storybook'],
   },
   {
     company: 'Thermo Fisher Scientific',
