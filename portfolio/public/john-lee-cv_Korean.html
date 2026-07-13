@@ -89,7 +89,7 @@
         font-size: 22pt;
         line-height: 1.08;
         letter-spacing: 0;
-        font-weight: 560;
+        font-weight: 600;
       }
 
       .header {
@@ -105,7 +105,7 @@
       .meta-label,
       .page-mark {
         font-size: 7.4pt;
-        font-weight: 650;
+        font-weight: 700;
         letter-spacing: 0.12em;
         text-transform: uppercase;
       }
@@ -127,7 +127,7 @@
         font-size: 36pt;
         line-height: 0.95;
         letter-spacing: -0.02em;
-        font-weight: 520;
+        font-weight: 500;
       }
 
       .role {
@@ -208,7 +208,7 @@
       .project-name {
         font-size: 10.6pt;
         line-height: 1.25;
-        font-weight: 620;
+        font-weight: 600;
       }
 
       .period {
@@ -221,7 +221,7 @@
         margin-top: 1mm;
         color: var(--muted);
         font-size: 8.4pt;
-        font-weight: 520;
+        font-weight: 500;
       }
 
       .description {
@@ -311,6 +311,64 @@
         letter-spacing: 0.12em;
       }
 
+      .project-brief {
+        margin-top: 6mm;
+        color: #34312d;
+        font-size: 9.2pt;
+      }
+
+      .project-stack {
+        display: grid;
+        gap: 4mm;
+        margin-top: 6mm;
+      }
+
+      .project-card {
+        padding: 4mm;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.6);
+        break-inside: avoid;
+      }
+
+      .project-card__head {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 4mm;
+        align-items: baseline;
+      }
+
+      .project-card__meta {
+        color: var(--soft);
+        font-size: 7.4pt;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .project-card p {
+        margin-top: 2mm;
+        color: #34312d;
+        font-size: 8.7pt;
+        line-height: 1.5;
+      }
+
+      .project-card ul {
+        margin: 2.2mm 0 0;
+        padding-left: 4mm;
+        color: #34312d;
+        font-size: 8.4pt;
+        line-height: 1.45;
+      }
+
+      .project-card li + li {
+        margin-top: 1mm;
+      }
+
+      .project-card .tags {
+        margin-top: 2.4mm;
+      }
+
       .footer {
         position: absolute;
         left: 16mm;
@@ -341,8 +399,20 @@
           height: 297mm;
           min-height: 297mm;
           margin: 0;
+          background: var(--paper);
           box-shadow: none;
           break-after: page;
+        }
+
+        .page--second {
+          background: var(--paper);
+        }
+
+        .contact-card,
+        .aside-block,
+        .project-card,
+        .tag {
+          background: #fffdf8;
         }
 
         .page:last-child {
@@ -358,13 +428,13 @@
           <div class="eyebrow">Curriculum Vitae / Korean / 2026</div>
           <h1>이청운</h1>
           <p class="role">
-            Senior Frontend Developer &middot; Software Developer &middot; New Media Artist
+            Senior Frontend Developer &middot; Software Engineer &middot; Creative Technologist
           </p>
           <p class="summary">
-            interface, structure, interaction이 하나의 경험으로 작동하는 digital systems를 설계하고
-            구현합니다. 장기적인 software engineering 경험을 바탕으로 content-driven platforms, data
-            visualisation, VR applications, computational art, public interactive installations를
-            연결해 왔습니다.
+            인터페이스, 구조, 상호작용이 하나의 경험으로 작동하는 디지털 시스템을 설계하고
+            구현합니다. 장기간의 소프트웨어 엔지니어링 경험을 바탕으로 콘텐츠 중심 플랫폼, 데이터
+            시각화, VR 애플리케이션, 컴퓨테이셔널 아트, 공공 인터랙티브 설치를 아우르는 다양한
+            시스템을 설계하고 구현해 왔습니다.
           </p>
         </div>
         <aside class="contact-card">
@@ -388,8 +458,8 @@
               </div>
               <p class="position">Senior Frontend Developer / Helsinki Metropolitan Area, Hybrid</p>
               <p class="description">
-                client 및 product work에서 content-driven websites, interface systems,
-                backend-connected applications, immersive VR experiences를 구축합니다.
+                클라이언트 및 프로덕트 프로젝트에서 콘텐츠 중심 디지털 플랫폼, 인터페이스 시스템,
+                백엔드와 연동되는 웹 애플리케이션, 몰입형 VR 경험을 설계하고 개발하고 있습니다.
               </p>
               <div class="tags">
                 <span class="tag">React</span><span class="tag">Next.js</span
@@ -406,8 +476,8 @@
               </div>
               <p class="position">Data Visualisation Engineer / Helsinki, Hybrid</p>
               <p class="description">
-                music data products를 위한 data visualisation tools와 interactive interfaces를
-                개발했습니다. React application work와 D3-based visual systems를 함께 다뤘습니다.
+                음악 데이터 제품을 위한 데이터 시각화 도구와 인터랙티브 인터페이스를 개발했습니다.
+                React 애플리케이션 작업과 D3 기반 시각화 시스템을 함께 다뤘습니다.
               </p>
               <div class="tags">
                 <span class="tag">D3.js</span><span class="tag">React</span
@@ -422,8 +492,8 @@
               </div>
               <p class="position">Senior Front-end Analyst / Helsinki</p>
               <p class="description">
-                modern frontend architecture, CMS workflows, testing, reusable component
-                documentation을 기반으로 content-driven websites와 interface systems를 구축했습니다.
+                현대적인 프론트엔드 아키텍처, CMS 워크플로, 테스트, 재사용 가능한 컴포넌트 문서화를
+                기반으로 콘텐츠 중심 웹사이트와 인터페이스 시스템을 구축했습니다.
               </p>
               <div class="tags">
                 <span class="tag">React</span><span class="tag">Sanity.io</span
@@ -440,25 +510,24 @@
             <div class="skill-list">
               <div class="skill-group">
                 <strong>Frontend Systems</strong
-                ><span>React, Next.js, TypeScript, Storybook, Sass, testing, CMS integration</span>
+                ><span>React, Next.js, TypeScript, Storybook, Sass, Testing, CMS Integration</span>
               </div>
               <div class="skill-group">
                 <strong>Data & Interaction</strong
                 ><span
-                  >D3.js, data visualisation, UI architecture, interactive tools, product
-                  workflows</span
+                  >D3.js, Data Visualization, UI Architecture, Interactive Tools, Product
+                  Workflows</span
                 >
               </div>
               <div class="skill-group">
                 <strong>Creative Technology</strong
                 ><span
-                  >Unity 3D, Unreal Engine, Processing, openFrameworks, OpenCV, physical
-                  computing</span
+                  >Unity 3D, Unreal Engine, Processing, openFrameworks, OpenCV, 피지컬 컴퓨팅</span
                 >
               </div>
               <div class="skill-group">
                 <strong>Software Engineering</strong
-                ><span>C, C++, C#, Objective-C, system architecture, automation software</span>
+                ><span>C, C++, C#, Objective-C, System Architecture, Automation Software</span>
               </div>
             </div>
           </section>
@@ -509,8 +578,8 @@
               <div>
                 <h3 class="project-name">Lab Automation Software</h3>
                 <p class="description">
-                  Thermo Fisher Scientific에서 scientific instruments와 production workflows를 위한
-                  senior software engineering 업무를 수행했습니다.
+                  Thermo Fisher Scientific에서 과학 장비와 생산 워크플로를 위한 자동화 소프트웨어를
+                  개발했습니다.
                 </p>
               </div>
             </article>
@@ -519,8 +588,8 @@
               <div>
                 <h3 class="project-name">Mobile Application Architecture</h3>
                 <p class="description">
-                  다양한 client 및 product projects에서 iOS applications의 software architecture와
-                  implementation을 담당했습니다.
+                  다양한 클라이언트 및 프로덕트 프로젝트에서 iOS 애플리케이션의 소프트웨어
+                  아키텍처와 구현을 담당했습니다.
                 </p>
               </div>
             </article>
@@ -529,9 +598,8 @@
               <div>
                 <h3 class="project-name">Semiconductor & Metrology Systems</h3>
                 <p class="description">
-                  South Korea, Canada, Japan에서 fault detection and classification systems, wafer
-                  metrology software, automated microscopy systems, SECS/GEM protocol 업무를
-                  수행했습니다.
+                  한국, 캐나다, 일본에서 고장 감지 및 분류 시스템, 웨이퍼 계측 소프트웨어, 자동화
+                  현미경 시스템, SECS/GEM 프로토콜 관련 업무를 수행했습니다.
                 </p>
               </div>
             </article>
@@ -619,15 +687,16 @@
               <div class="compact-item">
                 <strong>Focus</strong
                 ><span
-                  >Interface systems, data visualisation, VR applications, computational art, public
-                  installations</span
+                  >인터페이스 시스템, 데이터 시각화, VR 애플리케이션, 컴퓨테이셔널 아트, 공공
+                  인터랙티브 설치</span
                 >
               </div>
               <div class="compact-item">
                 <strong>Working Mode</strong
                 ><span
-                  >Senior hands-on developer로서 architecture sense, visual judgement, prototyping
-                  fluency, long-term implementation depth를 함께 갖추고 일합니다.</span
+                  >Hands-on 시니어 개발자로서 아키텍처 설계부터 프로토타이핑, 구현, 운영까지 제품
+                  개발의 전 과정을 직접 수행합니다. 시각적 완성도와 엔지니어링 품질을 함께 고려하며,
+                  아이디어를 실제 서비스로 구현합니다.</span
                 >
               </div>
             </div>
@@ -640,6 +709,130 @@
           ><a href="mailto:cj9studio@gmail.com">cj9studio@gmail.com</a> /
           <a href="https://www.linkedin.com/in/delphi1004/">linkedin.com/in/delphi1004</a></span
         ><span class="page-mark">02</span>
+      </div>
+    </section>
+
+    <section class="page page--second">
+      <header class="page-head">
+        <div>
+          <div class="eyebrow">Project Experience / 경력기술서</div>
+          <h2 class="page-title">Selected Project Experience</h2>
+        </div>
+        <div class="page-mark">이청운 / Projects</div>
+      </header>
+
+      <p class="project-brief">
+        대표 프로젝트를 중심으로 복잡한 프론트엔드 시스템 설계, 제품 구성 워크플로, e-commerce UI,
+        디자인 시스템 컴포넌트, 그리고 AI와 script를 활용한 Figma to Liquid 자동화 경험을
+        정리했습니다.
+      </p>
+
+      <div class="project-stack">
+        <article class="project-card">
+          <div class="project-card__head">
+            <h3 class="project-name">Ruukki Custom Ordering Configurator</h3>
+            <span class="project-card__meta">Canvas / Three.js / Geometry</span>
+          </div>
+          <p>
+            금속 지붕 부자재 주문을 위한 custom ordering tool로, 사용자가 2D 단면을 직접 그리고
+            치수와 각도를 조정하면 3D 모델, 주문 데이터, PDF 미리보기로 이어지는 configurator를
+            설계하고 구현했습니다.
+          </p>
+          <ul>
+            <li>
+              HTML Canvas 기반 2D profile editor에서 draw/edit/finish 모드, zoom/pan, touch gesture,
+              offscreen canvas export를 구현했습니다.
+            </li>
+            <li>
+              atan2/sin/cos 기반 각도-좌표 변환, 외각 이등분선 기반 angle label 배치, 수직 벡터
+              offset, point-to-segment 거리, line segment intersection, label collision/safe-area
+              scan을 구현했습니다.
+            </li>
+            <li>
+              2D profile 좌표를 Three.js BufferGeometry의 vertices/indices/UVs로 변환해 ribbon
+              mesh를 생성하고, CanvasTexture로 재질 표현을 보강했습니다.
+            </li>
+            <li>
+              Next.js, React, TypeScript, Zustand/SWR, NextAuth, i18n, Jest 기반으로 주문, 인증,
+              다국어, 테스트 가능한 구조를 구축했습니다.
+            </li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Next.js</span><span class="tag">React</span
+            ><span class="tag">TypeScript</span><span class="tag">Three.js</span
+            ><span class="tag">Zustand</span><span class="tag">SWR</span
+            ><span class="tag">Jest</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__head">
+            <h3 class="project-name">Aroma360 Hotel Collection Shopify Theme</h3>
+            <span class="project-card__meta">Shopify / Liquid / Commerce UI</span>
+          </div>
+          <p>
+            Hotel Collection 브랜드의 Shopify storefront에서 PDP, PLP, cart drawer, subscription,
+            recommendation, carousel, filtering/search, upsell 등 실제 매출 흐름과 연결되는 UI를
+            개발했습니다.
+          </p>
+          <ul>
+            <li>
+              Liquid section/snippet 구조와 TypeScript 모듈을 분리하고, esbuild 기반 build
+              pipeline으로 운영 가능한 theme 구조를 만들었습니다.
+            </li>
+            <li>
+              AJAX cart, recommendation, subscription, product purchase panel 등 상태가 자주 바뀌는
+              commerce UI를 안정적으로 구현했습니다.
+            </li>
+            <li>
+              BEM, design token, lazy image, event delegation, cleanup 패턴을 적용해 성능과
+              유지보수성을 함께 관리했습니다.
+            </li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Shopify Liquid</span><span class="tag">TypeScript</span
+            ><span class="tag">esbuild</span><span class="tag">Cypress</span
+            ><span class="tag">Jest</span><span class="tag">Design System</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__head">
+            <h3 class="project-name">Figma to Liquid Design Automation</h3>
+            <span class="project-card__meta">AI Native / Tokens / Components</span>
+          </div>
+          <p>
+            hotel-collection-theme의 submodule로, Figma에서 가져온 design HTML과 design token을
+            기반으로 Shopify Liquid component를 생성하고 theme에 연결하는 자동화 파이프라인을
+            설계했습니다.
+          </p>
+          <ul>
+            <li>
+              Copilot agent prompt와 script를 결합해 Figma HTML export를 Liquid snippet/section, BEM
+              CSS, styleguide entry로 변환하는 흐름을 만들었습니다.
+            </li>
+            <li>
+              token matching script로 inline style을 design token에 매핑하고, CSS variables, Shopify
+              settings schema, styleguide를 자동 갱신했습니다.
+            </li>
+            <li>
+              AI가 생성한 코드를 그대로 쓰지 않고 접근성, font shorthand, semantic HTML, theme
+              wiring, token coverage를 검증하는 절차를 포함했습니다.
+            </li>
+          </ul>
+          <div class="tags">
+            <span class="tag">AI-assisted Development</span><span class="tag">Figma</span
+            ><span class="tag">Design Tokens</span><span class="tag">Liquid</span
+            ><span class="tag">Node.js Scripts</span><span class="tag">Automation</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="footer">
+        <span
+          ><a href="mailto:cj9studio@gmail.com">cj9studio@gmail.com</a> /
+          <a href="https://www.linkedin.com/in/delphi1004/">linkedin.com/in/delphi1004</a></span
+        ><span class="page-mark">03</span>
       </div>
     </section>
   </body>
